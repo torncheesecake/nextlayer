@@ -1,0 +1,9 @@
+# robots.txt for https://nextlayerconsulting.co.uk/
+# Author: Me (Matthew Hillman)
+# Last updated: 2025-09-30
+
+User-agent: *
+Allow: /
+
+# Sitemap 
+Sitemap: https://nextlayerconsulting.co.uk/sitemap.xml

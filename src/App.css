@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+/* Satoshi Font Family */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+@theme {
+  /* Base palette */
+  --color-nlc-blue-lightest: hsl(205deg 100% 95%);
+  --color-nlc-blue-lighter: hsl(206deg 100% 85%);
+  --color-nlc-blue-light: hsl(206deg 100% 75%);
+  --color-nlc-blue: hsl(206deg 100% 24.1%);
+  --color-nlc-blue-bright: hsl(206deg 100% 35%);
+  --color-nlc-blue-brighter: hsl(206deg 100% 45%);
+  --color-nlc-blue-brightest: hsl(206deg 100% 55%);
+  --color-nlc-blue-dark: hsl(206deg 100% 25%);
+  --color-nlc-blue-darker: hsl(206deg 100% 15%);
+  --color-nlc-blue-darkest: hsl(205deg 100% 10%);
+  /* Pigment */
+  --color-biscay-dark: hsl(222deg 76% 20%);
+  --color-biscay: hsl(222deg 60% 25.5%);
+  --color-biscay-light1: hsl(222deg 49% 33%);
+  --color-biscay-light2: hsl(222deg 41% 42.5%);
+  --color-bittersweet-dark2: hsl(3deg 64% 47%);
+  --color-bittersweet-dark1: hsl(3deg 68% 56%);
+  --color-bittersweet: hsl(3deg 84% 66%);
+  --color-bittersweet-light1: hsl(3deg 96% 77%);
+  /* Other */
+  --color-pureblack: hsl(240deg 0% 4%);
+  --color-techblack: hsl(240deg 1.9% 7.3%);
+  --color-seasalt: hsl(195deg 24.24% 99.06%);
+  --color-snow: hsl(0deg 0% 98%);
+  --color-silver: hsl(240deg 10% 90.4%);
+  --color-graphite: hsl(240deg 3.4% 11.8%);
+  --color-space-grey: hsl(240deg 4.5% 14.5%);
+  --color-sideral: hsl(240deg 3.5% 17.3%);
+  --color-muted-grey-light: hsl(210deg 14.5% 69.8%);
+  --color-muted-grey-dark: hsl(214.3deg 9.1% 50.2%);
+
+  /* Typography */
+  --font-primary: "Satoshi", sans-serif;
+  --font-secondary: "Figtree", sans-serif;
+  --letter-spacing-tight: -0.0325em;
+}
+
+/* Global styles */
+html {
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+/* Accessibility - Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-nlc-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
