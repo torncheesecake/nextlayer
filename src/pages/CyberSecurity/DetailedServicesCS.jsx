@@ -23,7 +23,7 @@ export default function ServicesOverviewSection({
     return (
       <section className="bg-techblack text-seasalt px-6 py-16">
         <div
-          className="mx-auto max-w-7xl animate-pulse space-y-8"
+          className="mx-auto w-[90%] max-w-7xl animate-pulse space-y-8"
           aria-live="polite"
           aria-busy="true"
         >
@@ -41,7 +41,7 @@ export default function ServicesOverviewSection({
   if (error) {
     return (
       <section className="bg-techblack text-seasalt px-6 py-16">
-        <div className="mx-auto max-w-7xl text-center">
+        <div className="mx-auto w-[90%] max-w-7xl text-center">
           <h2 className="mb-6 text-3xl font-bold">Unable to load services</h2>
           <p className="text-seasalt/80 mb-8 text-lg">
             There was a problem loading this section, please try again later.
@@ -59,7 +59,7 @@ export default function ServicesOverviewSection({
 
   return (
     <section className="bg-techblack text-seasalt px-6 py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto w-[90%] max-w-7xl">
         <h2 className="mb-20 text-center text-4xl md:text-5xl font-extrabold tracking-tight">
           {heading}
         </h2>

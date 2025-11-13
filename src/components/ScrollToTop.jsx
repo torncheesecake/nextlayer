@@ -11,4 +11,4 @@ export default function ScrollToTop() {
   }, [pathname, hash]);
   return null;
 }
-// This component ensures that when navigating to a new route, the page scrolls to the top unless there's a hash in the URL, which indicates a specific section to scroll to. 
+// This component ensures that when navigating to a new route, the page scrolls to the top unless there's a hash in the URL, which indicates a specific section to scroll to.

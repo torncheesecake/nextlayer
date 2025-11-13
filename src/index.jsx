@@ -1,14 +1,22 @@
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import './App.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import AppShell from "./App";
+import "./App.css";
+import { router } from "./routes"; // Import router from the new routes.jsx
+import ErrorBoundary from "./components/ErrorBoundary";
 
-const container = document.getElementById("root");
-
-const root = createRoot(container);
+const root = createRoot(document.getElementById("root"));
 
 root.render(
-    <BrowserRouter>
-      <App />
-  </BrowserRouter>
+  <StrictMode>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <AppShell>
+          <RouterProvider router={router} />
+        </AppShell>
+      </HelmetProvider>
+    </ErrorBoundary>
+  </StrictMode>,
 );

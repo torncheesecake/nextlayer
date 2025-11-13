@@ -22,6 +22,21 @@ $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 $company = isset($_POST['company']) ? trim($_POST['company']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
+// Validate and sanitize email to prevent header injection
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ($is_ajax) {
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'error']);
+        exit;
+    }
+    header("Location: /contact?error=1");
+    exit;
+}
+// Remove any potential newline characters to prevent header injection
+$email = str_replace(["\r", "\n", "%0a", "%0d"], '', $email);
+$name = str_replace(["\r", "\n", "%0a", "%0d"], '', $name);
+
 $to = 'Hello@nextlayerconsulting.com';
 $subject = "New Contact Form Message";
 $headers = "From: " . $email . "\r\n";

@@ -1,0 +1,37 @@
+{
+  "project_name": "Next Layer Consulting",
+  "languages": {
+    "CSS": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "language_servers": ["css-language-server", "color-lsp", "stylelint"]
+    }
+  },
+  "lsp": {
+    "css-language-server": {
+      "settings": {
+        "css": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        },
+        "scss": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        },
+        "less": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        }
+      }
+    },
+    "stylelint": {
+      "binary": {
+        "path": "node_modules/.bin/stylelint",
+        "arguments": ["--stdin", "--stdin-filename", "{path}"]
+      }
+    }
+  }
+}

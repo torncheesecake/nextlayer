@@ -1,0 +1,49 @@
+import { Component } from "react";
+import PropTypes from "prop-types";
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex min-h-screen items-center justify-center bg-seasalt dark:bg-graphite">
+          <div className="text-center">
+            <h1 className="text-techblack dark:text-seasalt mb-4 text-4xl font-bold">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-techblack dark:text-seasalt mb-6 text-lg">
+              We're sorry for the inconvenience. Please refresh the page to
+              continue.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-nlc-blue hover:bg-nlc-blue-bright rounded-full px-8 py-4 text-lg font-semibold text-seasalt transition"
+            >
+              Refresh Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ErrorBoundary;

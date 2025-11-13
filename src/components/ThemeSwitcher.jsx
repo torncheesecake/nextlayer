@@ -1,76 +1,75 @@
-import React, { useEffect, useState } from "react";
-import { Sun, Moon, SunMoon } from 'lucide-react'
-
-const themePrefKey = "theme-mode";
-
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useLayoutEffect, useState } from "react";
+const THEME_KEY = "theme-mode";
+// 'light' | 'dark' | 'auto'
+function applyTheme(mode) {
+  const root = document.documentElement;
+  root.classList.remove("dark", "light");
+  if (mode === "auto") {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    root.classList.add(prefersDark ? "dark" : "light");
+  } else {
+    root.classList.add(mode);
+  }
+}
 export default function ThemeSwitcher() {
-  // Light, dark, or auto
-  const [theme, setTheme] = useState("auto");
-
-  // Handle theme change
-  useEffect(() => {
-    function applyTheme(mode) {
-      document.documentElement.classList.remove("dark", "light");
-      if (mode === "auto") {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.add("light");
-        }
-      } else {
-        document.documentElement.classList.add(mode);
-      }
-    }
-    applyTheme(theme);
-    localStorage.setItem(themePrefKey, theme);
-
-    // Listen for changes if auto
-    if (theme === "auto") {
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      const handleChange = () => applyTheme("auto");
-      mediaQuery.addEventListener("change", handleChange);
-      return () => {
-        mediaQuery.removeEventListener("change", handleChange);
-      };
-    }
-  }, [theme]);
-
-  // Load theme from localStorage when the page loads
-  useEffect(() => {
-    const saved = localStorage.getItem(themePrefKey);
-    if (saved === "dark" || saved === "light" || saved === "auto") {
-      setTheme(saved);
-    }
+  const getInitial = () => {
+    const saved =
+      typeof window !== "undefined" ? localStorage.getItem(THEME_KEY) : null;
+    return saved === "light" || saved === "dark" || saved === "auto"
+      ? saved
+      : "auto";
+  };
+  const [mode, setMode] = useState(getInitial);
+  useLayoutEffect(() => {
+    applyTheme(mode);
   }, []);
-
+  useLayoutEffect(() => {
+    localStorage.setItem(THEME_KEY, mode);
+    applyTheme(mode);
+  }, [mode]);
+  useEffect(() => {
+    if (mode !== "auto") return;
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = () => applyTheme("auto");
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, [mode]);
+  const btnBase =
+    "flex h-10 w-10 items-center justify-center rounded-full transition-colors";
+  const active = "bg-biscay text-seasalt shadow-md";
+  const inactive =
+    "bg-seasalt dark:bg-graphite border-none dark:border-seasalt text-graphite dark:text-seasalt hover:bg-biscay-light2";
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-3">
       <button
         type="button"
         aria-label="Light theme"
         title="Light mode"
-        className={`flex items-center justify-center w-10 h-10 text-lg transition-colors duration-300 rounded-full btn btn-circle btn-ghost ${theme === "light" ? "bg-nlc-blue text-white ring-2 ring-nlc-blue" : ""}`}
-        onClick={() => setTheme("light")}
+        className={`${btnBase} ${mode === "light" ? active : inactive}`}
+        onClick={() => setMode("light")}
       >
-        <Sun className="dark:text-white" />
+        <Sun />
       </button>
       <button
         type="button"
         aria-label="Dark theme"
         title="Dark mode"
-        className={`flex items-center justify-center w-10 h-10 text-lg transition-colors duration-300 rounded-full btn btn-circle btn-ghost ${theme === "dark" ? "bg-nlc-blue text-white ring-2 ring-nlc-blue" : ""}`}
-        onClick={() => setTheme("dark")}
+        className={`${btnBase} ${mode === "dark" ? active : inactive}`}
+        onClick={() => setMode("dark")}
       >
-        <Moon className="dark:text-white" />
+        <Moon />
       </button>
       <button
         type="button"
         aria-label="Auto theme"
-        title="Match device theme"
-        className={`flex items-center justify-center w-10 h-10 text-lg transition-colors duration-300 rounded-full btn btn-circle btn-ghost ${theme === "auto" ? "bg-nlc-blue text-white ring-2 ring-nlc-blue" : ""}`}
-        onClick={() => setTheme("auto")}
+        title="Match device"
+        className={`${btnBase} font-bold ${mode === "auto" ? active : inactive}`}
+        onClick={() => setMode("auto")}
       >
-        <SunMoon />
+        A
       </button>
     </div>
   );
