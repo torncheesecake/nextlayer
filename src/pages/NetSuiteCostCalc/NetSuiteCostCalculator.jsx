@@ -23,15 +23,16 @@ const INTEGRATIONS = [
   { name: "Other", cost: 1000 },
 ];
 
-const SUPPORT_MULTIPLIER = 1.0;
-const IMPLEMENTATION_MULTIPLIER = 2.0;
+const SUPPORT_MULTIPLIER = 1;
+const IMPLEMENTATION_MULTIPLIER = 2;
 const STORAGE_KEY = "nlc-netsuite-calculator-state";
 
 const validateNumber = (val, min, max) => {
   if (val === "") return "";
-  if (isNaN(val)) return "Value must be a number";
-  if (val < min) return `Value cannot be less than ${min}`;
-  if (max !== undefined && val > max)
+  const num = Number(val);
+  if (isNaN(num)) return "Value must be a number";
+  if (num < min) return `Value cannot be less than ${min}`;
+  if (max !== undefined && num > max)
     return `Value cannot be greater than ${max}`;
   return "";
 };
@@ -77,7 +78,10 @@ export default function NetSuiteCostCalculator() {
   }, [calculatorState]);
 
   const updateField = (field, value) => {
-    setCalculatorState((prev) => ({ ...prev, [field]: value }));
+    setCalculatorState((prev) => ({
+      ...prev,
+      [field]: value.replace(/[^\d]/g, ""), // Keep only numbers
+    }));
   };
 
   const toggleModule = (name) => {
@@ -103,10 +107,10 @@ export default function NetSuiteCostCalculator() {
     setErrors({});
   };
 
-  // Numeric conversions for calculation
-  const nSubs = parseInt(subsidiaries) || 0;
-  const nUsers = parseInt(users) || 0;
-  const nCountries = parseInt(countries) || 0;
+  // Calculate all costs using parsed numbers, fall back to 0 for empty input
+  const nSubs = Number(subsidiaries) || 0;
+  const nUsers = Number(users) || 0;
+  const nCountries = Number(countries) || 0;
   const MODULE_COSTS = selectedModules.reduce(
     (sum, name) => sum + (MODULES.find((m) => m.name === name)?.cost ?? 0),
     0,
@@ -125,6 +129,7 @@ export default function NetSuiteCostCalculator() {
   const annualSupportCost = annualLicenceCost * SUPPORT_MULTIPLIER;
   const totalCost5Years =
     annualLicenceCost * 5 + implementationCost + annualSupportCost * 5;
+
   const hasErrors = Object.values(errors).some(Boolean);
 
   return (
@@ -147,122 +152,116 @@ export default function NetSuiteCostCalculator() {
           {/* LEFT */}
           <section>
             <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
-                Company Profile
-              </h2>
-              <label
-                htmlFor="subsidiaries"
-                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
-              >
-                Number of Subsidiaries (max 200)
-              </label>
-              <input
-                id="subsidiaries"
-                type="number"
-                min={1}
-                max={200}
-                value={subsidiaries}
-                onChange={(e) => updateField("subsidiaries", e.target.value)}
-                className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.subsidiaries ? "border-red-500" : ""}`}
-                placeholder="Enter number of subsidiaries"
-                aria-describedby="subsidiaries-error"
-              />
-              {errors.subsidiaries && (
-                <p
-                  id="subsidiaries-error"
-                  className="mb-4 text-sm text-red-500"
+              Company Profile
+            </h2>
+            <label
+              htmlFor="subsidiaries"
+              className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
+            >
+              Number of Subsidiaries (max 200)
+            </label>
+            <input
+              id="subsidiaries"
+              type="number"
+              min={1}
+              max={200}
+              value={subsidiaries}
+              onChange={(e) => updateField("subsidiaries", e.target.value)}
+              className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.subsidiaries ? "border-red-500" : ""}`}
+              placeholder="Enter number of subsidiaries"
+              aria-describedby="subsidiaries-error"
+            />
+            {errors.subsidiaries && (
+              <p id="subsidiaries-error" className="mb-4 text-sm text-red-500">
+                {errors.subsidiaries}
+              </p>
+            )}
+            <label
+              htmlFor="users"
+              className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
+            >
+              Number of Users (max 5000)
+            </label>
+            <input
+              id="users"
+              type="number"
+              min={1}
+              max={5000}
+              value={users}
+              onChange={(e) => updateField("users", e.target.value)}
+              className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.users ? "border-red-500" : ""}`}
+              placeholder="Enter number of users"
+              aria-describedby="users-error"
+            />
+            {errors.users && (
+              <p id="users-error" className="mb-4 text-sm text-red-500">
+                {errors.users}
+              </p>
+            )}
+            <label
+              htmlFor="countries"
+              className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
+            >
+              Number of Countries Subsidiaries Operate In
+            </label>
+            <input
+              id="countries"
+              type="number"
+              min={1}
+              value={countries}
+              onChange={(e) => updateField("countries", e.target.value)}
+              className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.countries ? "border-red-500" : ""}`}
+              placeholder="Enter number of countries"
+              aria-describedby="countries-error"
+            />
+            {errors.countries && (
+              <p id="countries-error" className="mb-4 text-sm text-red-500">
+                {errors.countries}
+              </p>
+            )}
+          </section>
+          <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
+            <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
+              Required Modules
+            </h2>
+            <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
+              {MODULES.map(({ name, cost }) => (
+                <label
+                  key={name}
+                  className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
                 >
-                  {errors.subsidiaries}
-                </p>
-              )}
-              <label
-                htmlFor="users"
-                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
-              >
-                Number of Users (max 5000)
-              </label>
-              <input
-                id="users"
-                type="number"
-                min={1}
-                max={5000}
-                value={users}
-                onChange={(e) => updateField("users", e.target.value)}
-                className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.users ? "border-red-500" : ""}`}
-                placeholder="Enter number of users"
-                aria-describedby="users-error"
-              />
-              {errors.users && (
-                <p id="users-error" className="mb-4 text-sm text-red-500">
-                  {errors.users}
-                </p>
-              )}
-              <label
-                htmlFor="countries"
-                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
-              >
-                Number of Countries Subsidiaries Operate In
-              </label>
-              <input
-                id="countries"
-                type="number"
-                min={1}
-                value={countries}
-                onChange={(e) => updateField("countries", e.target.value)}
-                className={`dark:bg-graphite text-graphite placeholder:text-spacegrey/40 dark:text-seasalt border-default-light/40 focus:border-snow w-full rounded-lg border bg-seasalt px-5 py-3 text-lg transition focus:outline-none ${errors.countries ? "border-red-500" : ""}`}
-                placeholder="Enter number of countries"
-                aria-describedby="countries-error"
-              />
-              {errors.countries && (
-                <p id="countries-error" className="mb-4 text-sm text-red-500">
-                  {errors.countries}
-                </p>
-              )}
-            </section>
-            {/* Modules */}
-            <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
-              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
-                Required Modules
-              </h2>
-              <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
-                {MODULES.map(({ name, cost }) => (
-                  <label
-                    key={name}
-                    className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedModules.includes(name)}
-                      onChange={() => toggleModule(name)}
-                      className="accent-nlc-blue mr-4 h-5 w-5 cursor-pointer"
-                    />
-                    {name} (£{cost.toLocaleString()}/year)
-                  </label>
-                ))}
-              </div>
-            </section>
-            {/* Integrations */}
-            <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
-              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
-                External Systems to Integrate
-              </h2>
-              <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
-                {INTEGRATIONS.map(({ name, cost }) => (
-                  <label
-                    key={name}
-                    className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedIntegrations.includes(name)}
-                      onChange={() => toggleIntegration(name)}
-                      className="accent-nlc-blue mr-4 h-5 w-5 cursor-pointer"
-                    />
-                    {name} (£{cost.toLocaleString()}/year)
-                  </label>
-                ))}
-              </div>
-            </section>
-          </div>
+                  <input
+                    type="checkbox"
+                    checked={selectedModules.includes(name)}
+                    onChange={() => toggleModule(name)}
+                    className="accent-nlc-blue mr-4 h-5 w-5 cursor-pointer"
+                  />
+                  {name} (£{cost.toLocaleString()}/year)
+                </label>
+              ))}
+            </div>
+          </section>
+          <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
+            <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
+              External Systems to Integrate
+            </h2>
+            <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
+              {INTEGRATIONS.map(({ name, cost }) => (
+                <label
+                  key={name}
+                  className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedIntegrations.includes(name)}
+                    onChange={() => toggleIntegration(name)}
+                    className="accent-nlc-blue mr-4 h-5 w-5 cursor-pointer"
+                  />
+                  {name} (£{cost.toLocaleString()}/year)
+                </label>
+              ))}
+            </div>
+          </section>
           {/* RIGHT: Summary */}
           <aside className=" dark:bg-techblack bg-biscay sticky top-6 flex max-w-[400px] flex-col justify-center self-start rounded-xl p-10 text-center shadow-lg">
             <h2 className="text-seasalt dark:text-seasalt mb-8 text-5xl font-semibold">
@@ -296,12 +295,12 @@ export default function NetSuiteCostCalculator() {
               </>
             )}
             <p className="text-seasalt dark:text-seasalt/60 mx-auto max-w-[320px] text-sm font-light">
-              * This is an estimate. Actual pricing depends on
-              <span>your specific requirements and complexity. Please </span>
+              * This is an estimate. Actual pricing depends on your specific
+              requirements and complexity. Please{" "}
               <a href="/contact" className="text-seasalt underline">
                 get in touch
               </a>{" "}
-              <span>for a detailed consultation.</span>
+              for a detailed consultation.
             </p>
           </aside>
         </div>

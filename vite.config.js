@@ -7,6 +7,15 @@ export default defineConfig({
   build: {
     outDir: "dist", // Or any folder you want
     sourcemap: false, // Disable source maps in production to protect source code
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
   },
   base: "/dev/",
   resolve: {
