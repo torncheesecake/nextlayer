@@ -26,10 +26,7 @@ export default function Tailored() {
             <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
               NetSuite Implementation
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg">
-              We fit NetSuite to your business, with workshops, go-live, and
-              support all built for you.
-            </p>
+            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
           </div>
           {/* Card 2 */}
           <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
@@ -39,7 +36,7 @@ export default function Tailored() {
             <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
               Automation &amp; Dashboards
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg">
+            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
               Remove admin, get dashboards everyone trusts, and make decisions
               fast.
             </p>
@@ -52,7 +49,7 @@ export default function Tailored() {
             <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
               Integration
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg">
+            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
               Connect ecommerce, finance, CRM and fulfilment—all your data in
               one place.
             </p>
