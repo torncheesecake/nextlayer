@@ -226,7 +226,7 @@ export default function NetSuiteCostCalculator() {
                 {MODULES.map(({ name, cost }) => (
                   <label
                     key={name}
-                    className="text-graphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
+                    className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
                   >
                     <input
                       type="checkbox"
@@ -248,7 +248,7 @@ export default function NetSuiteCostCalculator() {
                 {INTEGRATIONS.map(({ name, cost }) => (
                   <label
                     key={name}
-                    className="text-graphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
+                    className="text-graphite dark:text-seasalt mb-2 flex cursor-pointer items-center"
                   >
                     <input
                       type="checkbox"
@@ -273,7 +273,7 @@ export default function NetSuiteCostCalculator() {
               </p>
             ) : (
               <>
-                <p className="text-seasalt dark:text-seasalt mb-6 text-2xl font-semibold">
+                <p className="text-seasalt dark:text-seasalt mb-6 text-3xl font-semibold">
                   Annual Licence Cost:
                   <span className="text-seasalt font-bold">
                     {" "}
@@ -281,7 +281,7 @@ export default function NetSuiteCostCalculator() {
                   </span>
                 </p>
                 <hr className="border-bittersweet dark:border-seasalt mb-6" />
-                <p className="text-seasalt text-2xl font-bold">
+                <p className="text-seasalt mb-6 text-3xl font-bold">
                   Total Estimated Cost
                   <br />
                   over 5 Years
@@ -289,7 +289,7 @@ export default function NetSuiteCostCalculator() {
                 <p className="text-seasalt dark:text-seasalt/80 mb-6 text-base font-light">
                   (Including implementation &amp; support costs)
                 </p>
-                <p className="text-seasalt mb-4 text-4xl font-bold">
+                <p className="text-seasalt mb-8 text-5xl font-bold">
                   £{totalCost5Years.toLocaleString()}
                 </p>
               </>
