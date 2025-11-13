@@ -148,7 +148,8 @@ export default function NetSuiteCostCalculator() {
           <section>
             <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
                 Company Profile
-              </h2>              <label
+              </h2>
+              <label
                 htmlFor="subsidiaries"
                 className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
               >
