@@ -5,3 +5,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 Header always set X-Debug-Header "htaccess-seen"
+Header always set X-Frame-Options "ALLOWALL"
