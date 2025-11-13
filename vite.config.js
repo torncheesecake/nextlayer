@@ -17,6 +17,9 @@ export default defineConfig({
             if (id.includes('lucide-react')) {
               return 'lucide-vendor';
             }
+            if (id.includes('react-router-dom')) {
+              return 'react-router-vendor';
+            }
             return 'vendor';
           }
         },
