@@ -8,25 +8,16 @@ Components have been reorganized into a **page-based folder structure** to impro
 
 ```
 src/
-├── components/                    # Shared/reusable components (18 components)
-│   ├── CallToAction.jsx
-│   ├── CallToActionBlack.jsx
-│   ├── ContactForm.jsx
-│   ├── Disclaimer.jsx
+├── components/                    # Shared/reusable components (9 components)
 │   ├── ErrorBoundary.jsx
 │   ├── Footer.jsx
-│   ├── FooterBlack.jsx
-│   ├── HeroContact.jsx
 │   ├── Layout.jsx
-│   ├── Logos.jsx
 │   ├── Navbar.jsx
-│   ├── PricingPDF.jsx
 │   ├── RouteHero.jsx
-│   ├── SEO.jsx
 │   ├── ScrollToTop.jsx
+│   ├── SEO.jsx
 │   ├── ThemeSwitcher.jsx
-│   ├── TrustBadgeRow.jsx
-│   └── Values.jsx
+│   └── TrustBadgeRow.jsx
 │
 └── pages/
     ├── About/
@@ -146,7 +137,7 @@ const OneSupport = lazy(() => import("./pages/OneSupport/OneSupport"));
 - Testimonials
 - WhyUs
 
-### CyberSecurity (7 page-specific components)
+### CyberSecurity (9 page-specific components)
 - ConsultantCredentials
 - CyberIntro
 - CyberPricing
@@ -154,6 +145,8 @@ const OneSupport = lazy(() => import("./pages/OneSupport/OneSupport"));
 - FeaturesCyber
 - PriceMatrix
 - TestimonialsCyber
+- Logos
+- PricingPDF
 
 ### NetSuite (5 page-specific components)
 - ComparisonTable
@@ -194,8 +187,11 @@ const OneSupport = lazy(() => import("./pages/OneSupport/OneSupport"));
 - NetSuiteCostCalculator
 
 ### Simple Pages (no page-specific components)
-- About - uses shared `Values` component
-- Contact - uses shared `HeroContact` component
+### About (1 page-specific component)
+- Values
+### Contact (2 page-specific components)
+- HeroContact
+- ContactForm
 - OneSupport - uses components from Services folder
 
 ## Benefits of This Structure
@@ -234,7 +230,7 @@ const OneSupport = lazy(() => import("./pages/OneSupport/OneSupport"));
 ## Special Cases & Patterns
 
 ### Simple Pages Without Subfolders
-Pages like **About**, **Contact**, and **Home** only contain a single file because they exclusively use shared components. This is perfectly fine and keeps the structure clean.
+Pages like **Home** only contain a single file because they exclusively use shared components. This is perfectly fine and keeps the structure clean.
 
 ### Cross-Page Component Sharing
 **OneSupport** page imports components from the **Services** folder. This demonstrates that page-specific components can be shared between related pages without moving them to the global `components/` folder.
@@ -252,9 +248,9 @@ This naming convention makes it easy to identify which page a component belongs 
 ## Migration Summary
 
 ### What Was Moved
-- **41 page-specific components** moved from `src/components/` to their respective page folders
+- **46 page-specific components** moved from `src/components/` to their respective page folders
 - **11 page files** moved into their own folders for consistency
-- **18 shared components** remain in `src/components/`
+- **9 shared components** remain in `src/components/`
 
 ### Build Status
 ✅ **Build successful** - All imports updated correctly  
@@ -285,9 +281,9 @@ When refactoring a page, all its components are in one folder, making it easy to
 ## Quick Reference: All Page Folders
 
 ```
-pages/About/          - 1 file  (About.jsx)
-pages/Contact/        - 1 file  (Contact.jsx)
-pages/CyberSecurity/  - 8 files (main + 7 components)
+pages/About/          - 2 files (main + 1 component)
+pages/Contact/        - 3 files (main + 2 components)
+pages/CyberSecurity/  - 10 files (main + 9 components)
 pages/Home/           - 6 files (main + 5 components)
 pages/NetSuite/       - 6 files (main + 5 components)
 pages/NetSuiteCostCalc/ - 2 files (main + 1 component)
@@ -298,7 +294,7 @@ pages/SuiteApps/      - 7 files (main + 6 components)
 pages/Web/            - 5 files (main + 4 components)
 ```
 
-**Total: 49 page files organized across 11 page folders**
+**Total: 54 page files organized across 11 page folders**
 
 ---
 
