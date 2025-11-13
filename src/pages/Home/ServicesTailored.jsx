@@ -33,7 +33,7 @@ export default function Tailored() {
           </div>
           {/* Card 2 */}
           <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
-            <div className="mb-4 flex h-32 w-full items-center justify-center">
+            <div className="mb-4 flex w-full items-center justify-center">
               <Workflow className="text-bittersweet h-20 w-20" />
             </div>
             <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
