@@ -6,7 +6,7 @@ export default function Tailored() {
   return (
     <section className="dark:bg-graphite bg-seasalt py-28 text-center transition-colors duration-300">
       <div className="container mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-relaxed font-semibold">
           Services tailored for you
         </h2>
         <div className="grid gap-10 md:grid-cols-3">

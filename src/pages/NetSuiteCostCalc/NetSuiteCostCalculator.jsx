@@ -145,12 +145,12 @@ export default function NetSuiteCostCalculator() {
         </div>
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-[1fr_400px]">
           {/* LEFT */}
-          <div>
+          <section>
             <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
                 Company Profile
               </h2>              <label
                 htmlFor="subsidiaries"
-                className="text-graphite dark:text-seasalt my-2 mt-4 flex items-center font-semibold"
+                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
               >
                 Number of Subsidiaries (max 200)
               </label>
@@ -175,7 +175,7 @@ export default function NetSuiteCostCalculator() {
               )}
               <label
                 htmlFor="users"
-                className="text-lightagraphite dark:text-seasalt mb-2 mt-6 flex items-center font-semibold"
+                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
               >
                 Number of Users (max 5000)
               </label>
@@ -197,7 +197,7 @@ export default function NetSuiteCostCalculator() {
               )}
               <label
                 htmlFor="countries"
-                className="text-lightagraphite dark:text-seasalt mb-2 mt-6 flex items-center font-semibold"
+                className="text-graphite dark:text-seasalt mb-2 flex items-center font-semibold"
               >
                 Number of Countries Subsidiaries Operate In
               </label>
@@ -226,7 +226,7 @@ export default function NetSuiteCostCalculator() {
                 {MODULES.map(({ name, cost }) => (
                   <label
                     key={name}
-                    className="text-lightagraphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
+                    className="text-graphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
                   >
                     <input
                       type="checkbox"
@@ -248,7 +248,7 @@ export default function NetSuiteCostCalculator() {
                 {INTEGRATIONS.map(({ name, cost }) => (
                   <label
                     key={name}
-                    className="text-lightagraphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
+                    className="text-graphite dark:text-seasalt mb-3 flex cursor-pointer items-center"
                   >
                     <input
                       type="checkbox"
@@ -263,7 +263,7 @@ export default function NetSuiteCostCalculator() {
             </section>
           </div>
           {/* RIGHT: Summary */}
-          <aside className=" dark:bg-techblack bg-biscay sticky top-25 flex max-w-[400px] flex-col justify-center self-start rounded-xl p-10 text-center shadow-lg">
+          <aside className=" dark:bg-techblack bg-biscay sticky top-6 flex max-w-[400px] flex-col justify-center self-start rounded-xl p-10 text-center shadow-lg">
             <h2 className="text-seasalt dark:text-seasalt mb-8 text-5xl font-semibold">
               Estimated Costs
             </h2>

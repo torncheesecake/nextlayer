@@ -39,10 +39,9 @@ export default function NetSuiteAdvantages() {
       <div className="text-graphite dark:text-seasalt container mx-auto mt-20 grid w-[90%] max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-2">
         {/* Pain Point 1 */}
         <div className="flex items-start gap-5">
-          <AlertTriangle className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
+          <AlertTriangle className="h-10 w-10 shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-6 text-3xl font-bold">
-            </h3>
+            <h3 className="mb-6 text-3xl font-bold"></h3>
             <p className="max-w-md text-lg">
               Overwhelmed by complicated interfaces or too many add-ons?
               NetSuite's intuitive design and tailored setup means your team
@@ -52,9 +51,9 @@ export default function NetSuiteAdvantages() {
         </div>
         {/* Pain Point 2 */}
         <div className="flex items-start gap-5">
-          <Zap className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
+          <Zap className="h-10 w-10 shrink-0 text-icon-brand-light" />
           <div>
-<h3 className="mb-6 text-3xl font-bold">
+            <h3 className="mb-6 text-3xl font-bold"></h3>
             <p className="max-w-md text-lg">
               Automation should simplify, not complicate. We build workflows
               that actually save time - reducing manual tasks without creating
@@ -64,10 +63,9 @@ export default function NetSuiteAdvantages() {
         </div>
         {/* Pain Point 3 */}
         <div className="flex items-start gap-5">
-          <Layers className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
+          <Layers className="h-10 w-10 shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-6 text-3xl font-bold">
-            </h3>
+            <h3 className="mb-6 text-3xl font-bold"></h3>
             <p className="max-w-md text-lg">
               Struggling to grow because your software can't keep up? NetSuite
               is built for growth, and we make sure your implementation scales
@@ -77,7 +75,7 @@ export default function NetSuiteAdvantages() {
         </div>
         {/* Pain Point 4 */}
         <div className="flex items-start gap-5">
-          <BarChart2 className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
+          <BarChart2 className="h-10 w-10 shrink-0 text-icon-brand-light" />
           <div>
             <h3 className="mb-6 text-3xl font-bold">
               Lack Of Real-Time Insights
