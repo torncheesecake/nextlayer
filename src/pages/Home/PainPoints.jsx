@@ -1,7 +1,7 @@
 export default function PainPoints() {
   return (
     <section className="bg-seasalt dark:bg-graphite py-24 transition-colors duration-300 z-40 relative">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto w-[90%] max-w-7xl px-4">
         <h2 className="text-techblack dark:text-seasalt mb-14 text-center text-4xl font-semibold md:text-5xl">
           Do any of these sound familiar?
         </h2>
