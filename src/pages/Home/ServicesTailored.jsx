@@ -27,6 +27,9 @@ export default function Tailored() {
               NetSuite Implementation
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
+              We fit NetSuite to your business, with workshops, go-live, and
+              support all built for you.
+            </p>
           </div>
           {/* Card 2 */}
           <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
