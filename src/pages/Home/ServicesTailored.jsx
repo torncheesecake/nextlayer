@@ -1,6 +1,7 @@
 import { Blocks, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
 export default function Tailored() {
   return (
     <section className="dark:bg-graphite bg-seasalt py-28 text-center transition-colors duration-300">
@@ -10,49 +11,49 @@ export default function Tailored() {
         </h2>
         <div className="grid gap-10 md:grid-cols-3">
           {/* Card 1 */}
-          <div className="group bg-seasalt dark:bg-graphite dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
-            <div className="mb-4 flex h-32 w-full flex-col items-center justify-center">
+          <div className="group bg-seasalt dark:bg-graphite dark:border-seasalt flex flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
+            <div className="mb-4 flex h-20 w-full items-center justify-center">
               <img
                 src="./src/assets/NetSuite-logo-half-light.png"
                 alt="NetSuite"
-                className="mb-4 block h-auto w-auto transition-all dark:hidden"
+                className="block h-20 w-auto transition-all dark:hidden"
               />
               <img
                 src="./src/assets/NetSuite-logo-half-dark.png"
                 alt="NetSuite"
-                className="mb-4 hidden h-auto w-auto transition-all dark:block"
+                className="hidden h-20 w-auto transition-all dark:block"
               />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
               NetSuite Implementation
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
+            <p className="text-graphite dark:text-seasalt text-center text-lg grow">
               We fit NetSuite to your business, with workshops, go-live, and
               support all built for you.
             </p>
           </div>
           {/* Card 2 */}
-          <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
-            <div className="mb-4 flex w-full items-center justify-center">
+          <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
+            <div className="mb-4 flex h-20 w-full items-center justify-center">
               <Workflow className="text-bittersweet h-20 w-20" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
               Automation &amp; Dashboards
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
+            <p className="text-graphite dark:text-seasalt text-center text-lg grow">
               Remove admin, get dashboards everyone trusts, and make decisions
               fast.
             </p>
           </div>
           {/* Card 3 */}
-          <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex min-h-[370px] flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
-            <div className="mb-4 flex h-32 w-full items-center justify-center">
+          <div className="group bg-seasalt dark:bg-graphite border-biscay dark:border-seasalt flex flex-col items-center justify-start rounded-xl border px-8 py-8 shadow-lg transition-all duration-200 md:rounded-2xl">
+            <div className="mb-4 flex h-20 w-full items-center justify-center">
               <Blocks className="text-bittersweet h-20 w-20" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
               Integration
             </h3>
-            <p className="text-graphite dark:text-seasalt text-center text-lg flex-grow">
+            <p className="text-graphite dark:text-seasalt text-center text-lg grow">
               Connect ecommerce, finance, CRM and fulfilment—all your data in
               one place.
             </p>
