@@ -297,11 +297,11 @@ export default function NetSuiteCostCalculator() {
             )}
             <p className="text-seasalt dark:text-seasalt/60 mx-auto max-w-[320px] text-sm font-light">
               * This is an estimate. Actual pricing depends on
-              your specific requirements and complexity. Please{" "}
+              <span>your specific requirements and complexity. Please </span>
               <a href="/contact" className="text-seasalt underline">
                 get in touch
               </a>{" "}
-              for a detailed consultation.
+              <span>for a detailed consultation.</span>
             </p>
           </aside>
         </div>
