@@ -24,7 +24,7 @@ export default function PortfolioShowcase() {
   return (
     <section className="bg-seasalt dark:bg-graphite  w-full py-20 transition-colors duration-300">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt font-que mb-10 text-left text-4xl font-bold md:text-center">
+        <h2 className="text-techblack dark:text-seasalt font-que mb-8 text-left text-5xl font-bold">
           Recent Projects
         </h2>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +42,7 @@ export default function PortfolioShowcase() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-graphite dark:text-seasalt mb-2 text-xl font-semibold">
+                <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
                   {proj.name}
                 </h3>
                 <p className="text-seasalt /80 dark:text-seasalt/80 text-base">

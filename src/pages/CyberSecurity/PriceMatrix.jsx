@@ -182,7 +182,7 @@ function PricingMatrix() {
   return (
     <div className="border-seasalt/10 mt-8 rounded-2xl border bg-black p-8 shadow-lg">
       <div className="mb-8">
-        <h3 className="mb-4 text-2xl font-extrabold text-white">
+        <h3 className="mb-6 text-3xl font-extrabold text-white">
           Detailed Pricing Breakdown
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -227,7 +227,7 @@ function PricingMatrix() {
             className="overflow-hidden rounded-xl border border-zinc-900 bg-zinc-950"
           >
             <div className="border-seasalt/15 border-b bg-zinc-900 px-6 py-4">
-              <h4 className="text-lg font-semibold text-white">
+              <h4 className="text-2xl mb-4 font-semibold text-seasalt">
                 {service.category}
               </h4>
             </div>

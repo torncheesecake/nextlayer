@@ -51,7 +51,7 @@ export default function ComplianceAccordion() {
     >
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 id={`${baseId}-heading`} className="mb-8 text-4xl font-bold">
+          <h2 id={`${baseId}-heading`} className="mb-8 text-5xl font-bold">
             Trusted by Government and Enterprise
           </h2>
         </div>

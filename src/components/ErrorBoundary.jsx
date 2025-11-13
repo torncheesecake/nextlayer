@@ -20,7 +20,7 @@ class ErrorBoundary extends Component {
       return (
         <div className="flex min-h-screen items-center justify-center bg-seasalt dark:bg-graphite">
           <div className="text-center">
-            <h1 className="text-techblack dark:text-seasalt mb-4 text-4xl font-bold">
+            <h1 className="text-techblack dark:text-seasalt mb-12 text-7xl font-bold">
               Oops! Something went wrong
             </h1>
             <p className="text-techblack dark:text-seasalt mb-6 text-lg">

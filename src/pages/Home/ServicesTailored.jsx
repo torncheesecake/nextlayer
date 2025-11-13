@@ -6,7 +6,7 @@ export default function Tailored() {
   return (
     <section className="dark:bg-graphite bg-seasalt py-28 text-center transition-colors duration-300">
       <div className="container mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-center text-5xl leading-[1.08] font-semibold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold">
           Services tailored for you
         </h2>
         <div className="grid gap-10 md:grid-cols-3">
@@ -24,7 +24,7 @@ export default function Tailored() {
                 className="hidden h-20 w-auto transition-all dark:block"
               />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold h-16 flex items-center">
               NetSuite Implementation
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-lg grow">
@@ -37,7 +37,7 @@ export default function Tailored() {
             <div className="mb-4 flex h-20 w-full items-center justify-center">
               <Workflow className="text-bittersweet h-20 w-20" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold h-16 flex items-center">
               Automation &amp; Dashboards
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-lg grow">
@@ -50,7 +50,7 @@ export default function Tailored() {
             <div className="mb-4 flex h-20 w-full items-center justify-center">
               <Blocks className="text-bittersweet h-20 w-20" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-4 text-2xl font-bold h-16 flex items-center">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold h-16 flex items-center">
               Integration
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-lg grow">

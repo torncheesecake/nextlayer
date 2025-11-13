@@ -33,7 +33,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-center text-5xl leading-tight font-semibold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-tight font-semibold">
           Real results from real businesses
         </h2>
         <Swiper

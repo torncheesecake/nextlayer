@@ -125,7 +125,7 @@ export default function RouteHero({ className = "" }) {
             className={`${hasIcon ? "col-span-12 lg:col-span-8" : "col-span-12"}`}
           >
             <div className="max-w-6xl">
-              <h1 className="text-seasalt dark:text-seasalt z-20 mb-10 text-left text-6xl leading-none tracking-tight font-bold md:text-6xl lg:text-8xl">
+              <h1 className="text-seasalt dark:text-seasalt z-20 mb-12 text-left text-7xl leading-none tracking-tight font-black">
                 {finalContent.heading}
               </h1>
               {finalContent.subtitle && (

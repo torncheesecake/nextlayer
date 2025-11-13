@@ -87,7 +87,7 @@ export default function PricingSimple() {
   return (
     <section className="dark:bg-graphite  bg-seasalt py-20">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-center text-4xl font-bold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl font-bold">
           Project Pricing
         </h2>
         <div className="mb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -96,7 +96,7 @@ export default function PricingSimple() {
               key={pkg.name}
               className="bg-seasalt dark:bg-graphite border-default-light dark:border-default-dark rounded-2xl border p-8 shadow"
             >
-              <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl font-semibold">
+              <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
                 {pkg.name}
               </h3>
               <p className="text-seasalt /80 dark:text-seasalt/80 mb-4">
@@ -115,7 +115,7 @@ export default function PricingSimple() {
             </div>
           ))}
         </div>
-        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-4xl font-bold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl font-bold">
           Support Packages
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -126,7 +126,7 @@ export default function PricingSimple() {
             >
               <div className="mb-4 flex items-center gap-3">
                 <Clock className="text-icon-brand-light" size={20} />
-                <h3 className="text-graphite dark:text-seasalt text-2xl font-semibold">
+                <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
                   {support.name} Support
                 </h3>
               </div>

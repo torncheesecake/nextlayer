@@ -125,7 +125,7 @@ export default function SuiteAppsQuality() {
             className="flex flex-col items-center text-left md:text-center"
           >
             <span className="mb-6">{app.icon}</span>
-            <h3 className="mb-2 text-2xl leading-[1.1] font-bold tracking-tight">
+            <h3 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight">
               {app.title}
             </h3>
             <p className="mx-auto mt-1 max-w-xs text-lg leading-[1.5]">

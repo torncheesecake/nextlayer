@@ -73,7 +73,7 @@ export default function WhyUs() {
       </div>
 
       <div className="container relative z-10 mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-seasalt dark:text-seasalt mb-12 text-center text-5xl leading-[1.08] font-semibold">
+        <h2 className="text-seasalt dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold">
           Why choose Next Layer?
         </h2>
         <div className="sm:gird-cols-2 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
@@ -91,7 +91,7 @@ export default function WhyUs() {
                 <span className="text-bittersweet mb-6">
                   <Icon className="h-12 w-12" />
                 </span>
-                <h3 className="text-seasalt dark:text-seasalt mb-2 text-2xl leading-[1.1] font-bold tracking-tight">
+                <h3 className="text-seasalt dark:text-seasalt mb-6 text-3xl leading-[1.1] font-bold tracking-tight">
                   {feature.title}
                 </h3>
                 <p className="text-seasalt mt-1 max-w-xs text-lg leading-normal sm:text-center">

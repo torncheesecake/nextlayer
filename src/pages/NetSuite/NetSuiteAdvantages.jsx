@@ -41,8 +41,7 @@ export default function NetSuiteAdvantages() {
         <div className="flex items-start gap-5">
           <AlertTriangle className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-2 text-2xl font-bold">
-              Complex Systems That Confuse
+            <h3 className="mb-6 text-3xl font-bold">
             </h3>
             <p className="max-w-md text-lg">
               Overwhelmed by complicated interfaces or too many add-ons?
@@ -55,9 +54,7 @@ export default function NetSuiteAdvantages() {
         <div className="flex items-start gap-5">
           <Zap className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-2 text-2xl font-bold">
-              Automation That Misses The Mark
-            </h3>
+<h3 className="mb-6 text-3xl font-bold">
             <p className="max-w-md text-lg">
               Automation should simplify, not complicate. We build workflows
               that actually save time - reducing manual tasks without creating
@@ -69,8 +66,7 @@ export default function NetSuiteAdvantages() {
         <div className="flex items-start gap-5">
           <Layers className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-2 text-2xl font-bold">
-              Systems That Don't Scale
+            <h3 className="mb-6 text-3xl font-bold">
             </h3>
             <p className="max-w-md text-lg">
               Struggling to grow because your software can't keep up? NetSuite
@@ -83,7 +79,7 @@ export default function NetSuiteAdvantages() {
         <div className="flex items-start gap-5">
           <BarChart2 className="h-10 w-10 flex-shrink-0 text-icon-brand-light" />
           <div>
-            <h3 className="mb-2 text-2xl font-bold">
+            <h3 className="mb-6 text-3xl font-bold">
               Lack Of Real-Time Insights
             </h3>
             <p className="max-w-md text-lg">

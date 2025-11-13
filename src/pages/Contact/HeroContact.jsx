@@ -32,7 +32,7 @@ export default function HeroContact() {
         <div className="grid items-start gap-12 md:grid-cols-12">
           {/* LEFT: Headline and Paragraph */}
           <div className="md:col-span-12 lg:col-span-6">
-            <h1 className="text-graphite dark:text-seasalt mb-10 text-7xl leading-[1] tracking-tight md:text-6xl lg:text-8xl">
+            <h1 className="text-graphite dark:text-seasalt mb-12 text-7xl leading-[1] tracking-tight">
               Let's talk
             </h1>
             <p className="text-graphite dark:text-seasalt mb-8 text-lg leading-[1.5] font-light md:text-2xl">

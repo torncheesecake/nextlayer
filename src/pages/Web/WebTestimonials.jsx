@@ -24,7 +24,7 @@ export default function NextLayerTestimonials() {
   return (
     <section className="bg-seasalt border-default-light dark:bg-graphite  dark:border-default-dark w-full border-b py-20 transition-colors duration-300">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-techblack dark:text-seasalt font-que mb-10 text-left text-4xl font-bold md:text-center">
+        <h2 className="text-techblack dark:text-seasalt font-que mb-8 text-left text-5xl font-bold">
           What Our Clients Say
         </h2>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">

@@ -28,7 +28,7 @@ export default function TestimonialsCarousel() {
   return (
     <section className="bg-graphite px-6 py-24">
       <div className="mx-auto max-w-4xl">
-        <h2 className="text-seasalt mb-10 text-center text-3xl font-bold tracking-tight">
+        <h2 className="text-seasalt mb-8 text-center text-5xl font-bold tracking-tight">
           What Our Clients Say
         </h2>
         <div className="border-sideral bg-techblack relative rounded-2xl border p-10 shadow-md">

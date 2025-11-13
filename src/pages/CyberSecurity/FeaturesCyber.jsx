@@ -30,7 +30,7 @@ export default function HowItWorks() {
   return (
     <section className="bg-graphite px-6 py-20" id="how-it-works">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-seasalt mb-14 text-center text-3xl font-bold tracking-tight">
+        <h2 className="text-seasalt mb-8 text-center text-5xl font-bold tracking-tight">
           How It Works
         </h2>
         <div className="relative">
@@ -45,7 +45,7 @@ export default function HowItWorks() {
                 </div>
                 {/* Content card */}
                 <div className="bg-graphite /80 flex-1 rounded-xl p-7">
-                  <h3 className="text-seasalt mb-3 text-2xl font-semibold tracking-tight">
+                  <h3 className="text-seasalt mb-6 text-3xl font-semibold tracking-tight">
                     {step.title}
                   </h3>
                   <p className="text-seasalt/80 mb-4 text-lg">

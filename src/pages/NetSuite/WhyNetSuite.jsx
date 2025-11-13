@@ -3,7 +3,7 @@ export default function WhyNetSuite() {
   return (
     <section className="dark:bg-techblack bg-seasalt py-28 transition-colors duration-300">
       <div className="container mx-auto w-[90%] max-w-7xl px-6 text-center">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-5xl leading-[1.08] font-semibold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-5xl leading-[1.08] font-semibold">
           Why NetSuite? The ERP Built To Fit Your Business
         </h2>
         <p className="text-graphite dark:text-seasalt mx-auto mb-16 max-w-5xl text-lg leading-relaxed">
@@ -20,7 +20,7 @@ export default function WhyNetSuite() {
             <span className="mb-6 text-icon-brand-light">
               <Database className="h-12 w-12" />
             </span>
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl leading-[1.1] font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl leading-[1.1] font-bold">
               Unified Data, One Truth
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
@@ -34,7 +34,7 @@ export default function WhyNetSuite() {
             <span className="mb-6 text-icon-brand-light">
               <Zap className="h-12 w-12" />
             </span>
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl leading-[1.1] font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl leading-[1.1] font-bold">
               Automation That Works For You
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
@@ -48,7 +48,7 @@ export default function WhyNetSuite() {
             <span className="mb-6 text-icon-brand-light">
               <Repeat className="h-12 w-12" />
             </span>
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl leading-[1.1] font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl leading-[1.1] font-bold">
               Scales As You Grow
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
@@ -62,7 +62,7 @@ export default function WhyNetSuite() {
             <span className="mb-6 text-icon-brand-light">
               <ShieldCheck className="h-12 w-12" />
             </span>
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl leading-[1.1] font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl leading-[1.1] font-bold">
               Enterprise-Grade Security
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">

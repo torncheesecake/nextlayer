@@ -30,10 +30,10 @@ export default function Footer() {
             <span className="bg-seasalt dark:bg-graphite mb-1 inline-flex items-center justify-center rounded-full p-2 shadow-lg">
               <img src={BugLight} alt="Next Layer Logo" className="h-10 w-10" />
             </span>
-            <h2 className="text-seasalt text-3xl font-black tracking-tight">
+            <h2 className="text-seasalt mb-8 text-5xl font-black tracking-tight">
               Next Layer Consulting
             </h2>
-            <h3 className="text-seasalt/70 dark:text-silver max-w-sm text-xl">
+            <h3 className="text-seasalt/70 dark:text-silver mb-6 max-w-sm text-3xl">
               Ready for what's next?
             </h3>
           </div>

@@ -14,7 +14,7 @@ export default function SuiteAppsGrid() {
   return (
     <section className="dark:bg-techblack bg-seasalt py-28 text-center transition-colors duration-300">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="dark:text-seasalt mb-10 text-center text-4xl leading-[1.08] font-semibold text-icon-brand-light">
+        <h2 className="dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold text-icon-brand-light">
           Explore All Our SuiteApps
         </h2>
         <div className="mb-14 flex flex-wrap justify-center gap-4">

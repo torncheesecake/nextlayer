@@ -70,7 +70,7 @@ const focusRing =
         <header className="mx-auto max-w-4xl text-center">
           <h2
             id={headingId}
-            className="text-seasalt mb-8 text-4xl leading-tight font-black"
+            className="text-seasalt mb-8 text-5xl leading-tight font-black"
           >
             {title}
           </h2>
@@ -124,7 +124,7 @@ function MatrixToggle({ open, onToggle }) {
       <header className="mb-5">
         <h3
           id={`${baseId}-title`}
-          className="text-seasalt mb-2 text-2xl font-extrabold tracking-tight"
+          className="text-seasalt mb-6 text-3xl font-extrabold tracking-tight"
         >
           {title}
         </h3>
@@ -236,7 +236,7 @@ export default function PricingSummary({
       <section className="bg-graphite  text-seasalt px-6 py-24">
         <div className="mx-auto w-[90%] max-w-7xl">
           <Card as="div">
-            <h3 className="mb-2 text-2xl font-semibold">
+            <h3 className="mb-6 text-3xl font-semibold">
               Unable to load pricing
             </h3>
             <p className="text-seasalt/70">

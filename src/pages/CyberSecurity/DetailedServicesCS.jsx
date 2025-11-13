@@ -42,7 +42,7 @@ export default function ServicesOverviewSection({
     return (
       <section className="bg-techblack text-seasalt px-6 py-16">
         <div className="mx-auto w-[90%] max-w-7xl text-center">
-          <h2 className="mb-6 text-3xl font-bold">Unable to load services</h2>
+          <h2 className="mb-8 text-5xl font-bold">Unable to load services</h2>
           <p className="text-seasalt/80 mb-8 text-lg">
             There was a problem loading this section, please try again later.
           </p>
@@ -60,7 +60,7 @@ export default function ServicesOverviewSection({
   return (
     <section className="bg-techblack text-seasalt px-6 py-20 lg:py-24">
       <div className="mx-auto w-[90%] max-w-7xl">
-        <h2 className="mb-20 text-center text-4xl md:text-5xl font-extrabold tracking-tight">
+        <h2 className="mb-8 text-center text-5xl font-extrabold tracking-tight">
           {heading}
         </h2>
 
@@ -88,7 +88,7 @@ function ServiceCard({ icon, title, summary, benefits, highlights }) {
       </div>
 
       {/* Title */}
-      <h3 className="mb-4 text-center text-2xl font-bold leading-tight">
+      <h3 className="mb-6 text-center text-3xl font-bold leading-tight">
         {title}
       </h3>
 

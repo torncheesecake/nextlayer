@@ -7,7 +7,7 @@ export default function Prices() {
     >
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-techblack dark:text-techblack mb-6 text-center text-5xl font-bold">
+          <h2 className="text-techblack dark:text-techblack mb-8 text-center text-5xl font-bold">
             OneSupport 12 and 24 Month Contracts
           </h2>
           <p className="text-techblack dark:text-techblack mb-16 text-center text-lg">
@@ -23,7 +23,7 @@ export default function Prices() {
             className=" dark:bg-card-dark dark:border-default-dark bg-surface-light relative flex flex-col rounded-xl border p-10 text-center shadow-lg"
             id="onesupport-80"
           >
-            <h3 className="text-techblack dark:text-techblack mb-8 text-2xl font-bold">
+            <h3 className="text-techblack dark:text-techblack mb-6 text-3xl font-bold">
               OneSupport 80
             </h3>
             <p className="text-techblack dark:text-techblack mb-0 text-lg font-semibold">
@@ -64,7 +64,7 @@ export default function Prices() {
             className="border-graphite dark:bg-card-dark dark:border-default-dark bg-surface-light flex flex-col rounded-xl border p-10 text-center shadow-lg"
             id="onesupport-25"
           >
-            <h3 className="text-techblack dark:text-techblack mb-8 text-2xl font-bold">
+            <h3 className="text-techblack dark:text-techblack mb-6 text-3xl font-bold">
               OneSupport 25
             </h3>
             <p className="text-techblack dark:text-techblack mb-0 font-semibold">

@@ -46,7 +46,7 @@ export default function MythVsRealityGrid() {
   return (
     <section className="bg-biscay dark:bg-techblack py-16 sm:py-20">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-seasalt dark:text-seasalt mb-10 text-center text-3xl font-bold md:text-4xl">
+        <h2 className="text-seasalt dark:text-seasalt mb-8 text-center text-5xl font-bold">
           Myth vs Reality
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

@@ -3,7 +3,7 @@ export default function GetStartedProcess() {
   return (
     <section className="bg-seasalt dark:bg-graphite  py-28 transition-colors duration-300">
       <div className="container mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-10 text-center text-4xl leading-[1.08] font-semibold md:text-5xl">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold">
           Getting Started: Our Simple Approach
         </h2>
         <p className="text-graphite dark:text-seasalt mx-auto mb-14 max-w-2xl text-center text-lg leading-relaxed">
@@ -14,8 +14,8 @@ export default function GetStartedProcess() {
           {/* Step 1 */}
           <div className="bg-seasalt dark:bg-graphite flex flex-col items-center rounded-xl p-8 shadow-lg transition">
             <MessageCircle className="text-icon-brand-light dark:text-icon-brand-dark mb-5 h-12 w-12" />
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-center text-xl font-bold">
-              1. Discovery Session
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-center text-3xl font-bold">
+              Discovery &amp; Planning
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-base">
               We start with a call to understand your current processes, ERP
@@ -26,8 +26,8 @@ export default function GetStartedProcess() {
           {/* Step 2 */}
           <div className="bg-seasalt dark:bg-graphite flex flex-col items-center rounded-xl p-8 shadow-lg transition">
             <ClipboardCheck className="text-icon-brand-light dark:text-icon-brand-dark mb-5 h-12 w-12" />
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-center text-xl font-bold">
-              2. Solution Blueprint
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-center text-3xl font-bold">
+              Implementation &amp; Customisation
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-base">
               Next, a tailored NetSuite solution is mapped out, identifying pain
@@ -38,8 +38,8 @@ export default function GetStartedProcess() {
           {/* Step 3 */}
           <div className="bg-seasalt dark:bg-graphite flex flex-col items-center rounded-xl p-8 shadow-lg transition">
             <Rocket className="text-icon-brand-light dark:text-icon-brand-dark mb-5 h-12 w-12" />
-            <h3 className="text-graphite dark:text-seasalt mb-2 text-center text-xl font-bold">
-              3. Implementation &amp; Growth
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-center text-3xl font-bold">
+              Support &amp; Optimisation
             </h3>
             <p className="text-graphite dark:text-seasalt text-center text-base">
               NetSuite is configured, data is migrated, and the system is

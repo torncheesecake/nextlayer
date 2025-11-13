@@ -131,7 +131,7 @@ export default function NetSuiteCostCalculator() {
     <section className="bg-seasalt dark:bg-techblack relative z-40 min-h-screen p-6 transition-colors duration-300 md:p-12">
       <div className="dark:bg-graphite border-default-light mx-auto w-[90%] max-w-7xl rounded-xl border bg-seasalt p-12 shadow-lg">
         <div className="mb-14 flex items-center justify-between">
-          <h1 className="text-graphite dark:text-seasalt text-5xl font-bold tracking-tight">
+          <h1 className="text-graphite dark:text-seasalt mb-12 text-7xl font-bold tracking-tight">
             NetSuite Cost Calculator
           </h1>
           <button
@@ -146,12 +146,9 @@ export default function NetSuiteCostCalculator() {
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-[1fr_400px]">
           {/* LEFT */}
           <div>
-            {/* Company Profile */}
-            <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
-              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-6 border-b-4 pb-2 text-2xl font-semibold">
+            <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
                 Company Profile
-              </h2>
-              <label
+              </h2>              <label
                 htmlFor="subsidiaries"
                 className="text-graphite dark:text-seasalt my-2 mt-4 flex items-center font-semibold"
               >
@@ -222,7 +219,7 @@ export default function NetSuiteCostCalculator() {
             </section>
             {/* Modules */}
             <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
-              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-6 border-b-4 pb-2 text-2xl font-semibold">
+              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
                 Required Modules
               </h2>
               <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
@@ -244,7 +241,7 @@ export default function NetSuiteCostCalculator() {
             </section>
             {/* Integrations */}
             <section className="dark:bg-graphite border-graphite mb-14 rounded-lg border bg-seasalt p-8 dark:shadow-none">
-              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-6 border-b-4 pb-2 text-2xl font-semibold">
+              <h2 className="text-techblack dark:text-seasalt border-default-dark mb-8 border-b-4 pb-2 text-5xl font-semibold">
                 External Systems to Integrate
               </h2>
               <div className="scrollbar-thin scrollbar-thumb-nlc-blue scrollbar-track-silver dark:scrollbar-track-sideral max-h-56 overflow-y-auto pr-4">
@@ -267,7 +264,7 @@ export default function NetSuiteCostCalculator() {
           </div>
           {/* RIGHT: Summary */}
           <aside className=" dark:bg-techblack bg-biscay sticky top-25 flex max-w-[400px] flex-col justify-center self-start rounded-xl p-10 text-center shadow-lg">
-            <h2 className="text-seasalt dark:text-seasalt mb-10 text-3xl font-semibold">
+            <h2 className="text-seasalt dark:text-seasalt mb-8 text-5xl font-semibold">
               Estimated Costs
             </h2>
             {hasErrors ? (

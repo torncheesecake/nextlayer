@@ -4,7 +4,7 @@ export default function FindYourBestValue() {
     <section className="bg-seasalt dark:bg-graphite  py-20">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <h3 className="text-graphite dark:text-seasalt mb-3 text-4xl font-bold">
+          <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
             Find Your Best Value
           </h3>
           <p className="text-graphite dark:text-seasalt mb-12 text-lg">

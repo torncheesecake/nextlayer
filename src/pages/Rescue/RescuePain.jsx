@@ -38,7 +38,7 @@ export default function NetsuiteCheckerboard() {
             className={`mb-16 flex flex-col items-center gap-8 md:flex-row ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
           >
             <div className="md:flex-1">
-              <h3 className="text-techblack mb-4 text-3xl font-semibold">
+              <h3 className="text-techblack mb-6 text-3xl font-semibold">
                 {section.heading}
               </h3>
               <p className="text-techblack text-lg">{section.text}</p>

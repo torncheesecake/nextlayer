@@ -10,7 +10,7 @@ export default function Stats() {
           <div className="text-techblack dark:text-seasalt font-sans text-3xl font-bold">
             44
           </div>
-          <h4 className="text-techblack dark:text-seasalt mt-1 text-2xl">
+          <h4 className="text-techblack dark:text-seasalt mb-4 text-2xl">
             Customers and counting
           </h4>
         </div>
@@ -21,7 +21,7 @@ export default function Stats() {
           <div className="text-techblack dark:text-seasalt font-sans text-3xl font-bold">
             228
           </div>
-          <h4 className="text-techblack dark:text-seasalt mt-1 text-2xl">
+          <h4 className="text-techblack dark:text-seasalt mb-4 text-2xl">
             Projects delivered
           </h4>
         </div>
@@ -32,7 +32,7 @@ export default function Stats() {
           <div className="text-techblack dark:text-seasalt font-sans text-3xl font-bold">
             577
           </div>
-          <h4 className="text-techblack dark:text-seasalt mt-1 text-2xl">
+          <h4 className="text-techblack dark:text-seasalt mb-4 text-2xl">
             Custom Solutions
           </h4>
         </div>
@@ -43,7 +43,7 @@ export default function Stats() {
           <div className="text-techblack dark:text-seasalt font-sans text-3xl font-bold">
             10,000+
           </div>
-          <h4 className="text-techblack dark:text-seasalt mt-1 text-2xl">
+          <h4 className="text-techblack dark:text-seasalt mb-4 text-2xl">
             Support tickets resolved
           </h4>
         </div>

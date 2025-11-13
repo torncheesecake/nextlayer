@@ -80,7 +80,7 @@ export default function ComparisonTable() {
   return (
     <section className="bg-seasalt dark:bg-graphite  py-28 transition-colors duration-300">
       <div className="container mx-auto max-w-6xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-center text-4xl leading-[1.08] font-semibold md:text-5xl">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl leading-[1.08] font-semibold">
           ERP Comparison: Which Solution Fits Your Business?
         </h2>
         <p className="text-graphite dark:text-seasalt mx-auto mb-14 max-w-3xl text-center text-lg leading-relaxed">

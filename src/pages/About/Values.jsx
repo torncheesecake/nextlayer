@@ -3,7 +3,7 @@ export default function Values() {
   return (
     <section className="dark:bg-graphite  bg-seasalt py-20 relative z-40">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="dark:text-seasalt mb-10 text-4xl font-bold text-techblack">
+        <h2 className="dark:text-seasalt mb-8 text-5xl font-bold text-techblack">
           What makes us any different?
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
@@ -13,8 +13,8 @@ export default function Values() {
             <div className="mb-3 text-bittersweet dark:text-bittersweet-dark2">
               <Lightbulb className="h-8 w-8" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-1 text-lg font-semibold">
-              All the Experience
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
+              Integrity
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
               Hundreds of NetSuite projects under our belt. If it can go wrong,
@@ -27,8 +27,8 @@ export default function Values() {
             <div className="text-bittersweet dark:text-bittersweet-dark2 mb-3">
               <Smile className="h-8 w-8" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-1 text-lg font-semibold">
-              Real Experts
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
+              Excellence
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
               You'll always speak to someone who knows their stuff, no scripts,
@@ -41,8 +41,8 @@ export default function Values() {
             <div className="mb-3 text-bittersweet dark:text-bittersweet-dark2">
               <Star className="h-8 w-8" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mb-1 text-lg font-semibold">
-              Proven Support
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
+              Partnership
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
               We keep clients long-term because we never disappear or pass you
@@ -55,7 +55,7 @@ export default function Values() {
             <div className="mb-3 text-bittersweet dark:text-bittersweet-dark2">
               <TrendingUp className="h-8 w-8" />
             </div>
-            <h3 className="mb-1 text-lg font-semibold text-techblack dark:text-seasalt">
+            <h3 className="mb-6 text-3xl font-semibold text-techblack dark:text-seasalt">
               Simple, Not Stressful
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">

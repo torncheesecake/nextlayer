@@ -3,7 +3,7 @@ export default function PricesPAYG() {
     <section className="dark:bg-graphite bg-seasalt py-20">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-techblack dark:text-seasalt mb-10 text-5xl font-bold">
+          <h2 className="text-techblack dark:text-seasalt mb-8 text-5xl font-bold">
             OneSupport Pay As You Go Option
           </h2>
           <p className="text-techblack dark:text-seasalt mb-16 text-center text-lg">
@@ -15,7 +15,7 @@ export default function PricesPAYG() {
           </p>
         </div>
         <div className="bg-biscay border-nlc-blue-light dark:border-seasalt dark:bg-techblack mx-auto flex max-w-md flex-col rounded-xl border p-10 text-center shadow-lg">
-          <h3 className="text-seasalt dark:text-seasalt mb-6 text-2xl font-bold">
+          <h3 className="text-seasalt dark:text-seasalt mb-6 text-3xl font-bold">
             OneSupport PAYG
           </h3>
           <p className="dark:text-seasalt mb-6 text-3xl font-extrabold text-white">

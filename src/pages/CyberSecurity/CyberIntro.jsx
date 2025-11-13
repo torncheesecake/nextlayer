@@ -6,7 +6,7 @@ export default function CyberIntro() {
     >
       {/* Left column */}
       <div className="flex-1">
-        <h2 className="text-seasalt mb-10 text-5xl font-extrabold md:text-5xl">
+        <h2 className="text-seasalt mb-8 text-5xl font-extrabold">
           Proactive security that protects what matters
         </h2>
         <p className="text-seasalt/90 mb-8 text-lg leading-relaxed">

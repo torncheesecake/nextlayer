@@ -3,7 +3,7 @@ export default function NetSuiteLifecycle() {
   return (
     <section className="dark:bg-graphite  bg-seasalt py-20">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-techblack dark:text-seasalt mb-12 text-center text-5xl font-bold">
+        <h2 className="text-techblack dark:text-seasalt mb-8 text-center text-5xl font-bold">
           NetSuite lifecycle, end to end
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -12,7 +12,7 @@ export default function NetSuiteLifecycle() {
             <div className="my-3 text-icon-brand-light">
               <ClipboardCheck className="h-12 w-12" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mt-1 text-lg font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Implementation
             </h3>
             <p className="text-graphite dark:text-seasalt mt-2 text-lg">
@@ -25,7 +25,7 @@ export default function NetSuiteLifecycle() {
             <div className="my-3 text-icon-brand-light">
               <Workflow className="h-12 w-12" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mt-1 text-lg font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Automations &amp; Integrations
             </h3>
             <p className="text-graphite dark:text-seasalt mt-2 text-lg">
@@ -38,7 +38,7 @@ export default function NetSuiteLifecycle() {
             <div className="my-3 text-icon-brand-light">
               <Gauge className="h-12 w-12" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mt-1 text-lg font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Optimisation
             </h3>
             <p className="text-graphite dark:text-seasalt mt-2 text-lg">
@@ -51,7 +51,7 @@ export default function NetSuiteLifecycle() {
             <div className="my-3 text-icon-brand-light">
               <LifeBuoy className="h-12 w-12" />
             </div>
-            <h3 className="text-graphite dark:text-seasalt mt-1 text-lg font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Support &amp; Aftercare
             </h3>
             <p className="text-graphite dark:text-seasalt mt-2 text-lg">

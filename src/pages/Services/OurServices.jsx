@@ -5,7 +5,7 @@ export default function OurServices() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Intro */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="text-techblack dark:text-seasalt mb-4 text-5xl font-black tracking-tight md:text-5xl">
+          <h2 className="text-techblack dark:text-seasalt mb-8 text-5xl font-black tracking-tight">
             NetSuite Expertise Without The Headaches
           </h2>
           <p className="text-graphite dark:text-seasalt/90 mb-6 text-lg font-light md:text-xl">
@@ -33,8 +33,8 @@ export default function OurServices() {
           {/* Implement Card */}
           <div className="dark:bg-graphite  border-default-light dark:border-default-dark bg-seasalt flex flex-col items-start gap-4 rounded-xl border p-8 shadow-lg dark:shadow-[0_2px_20px_0_rgba(0,0,0,0.22)]">
             <Rocket className="mb-2 h-12 w-12 text-icon-brand-light" />
-            <h3 className="text-graphite dark:text-seasalt text-2xl font-bold">
-              Implement
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
+              NetSuite Implementation
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
               Scope, configure, migrate, and test for a clean go-live, or rescue
@@ -49,8 +49,8 @@ export default function OurServices() {
           {/* Optimise Card */}
           <div className="dark:bg-graphite  border-default-light dark:border-default-dark bg-seasalt flex flex-col items-start gap-4 rounded-xl border p-8 shadow-lg dark:shadow-[0_2px_20px_0_rgba(0,0,0,0.22)]">
             <Workflow className="mb-2 h-12 w-12 text-icon-brand-light" />
-            <h3 className="text-graphite dark:text-seasalt text-2xl font-bold">
-              Optimise
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
+              NetSuite Optimisation
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
               Make daily work faster and cleaner: tune roles, searches, and
@@ -65,7 +65,7 @@ export default function OurServices() {
           {/* Build Card */}
           <div className="dark:bg-graphite  border-default-light dark:border-default-dark bg-seasalt flex flex-col items-start gap-4 rounded-xl border p-8 shadow-lg dark:shadow-[0_2px_20px_0_rgba(0,0,0,0.22)]">
             <Code2 className="mb-2 h-12 w-12 text-icon-brand-light" />
-            <h3 className="text-graphite dark:text-seasalt text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Build
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">
@@ -81,7 +81,7 @@ export default function OurServices() {
           {/* Support Card */}
           <div className="dark:bg-graphite  border-default-light dark:border-default-dark bg-seasalt flex flex-col items-start gap-4 rounded-xl border p-8 shadow-lg dark:shadow-[0_2px_20px_0_rgba(0,0,0,0.22)]">
             <LifeBuoy className="mb-2 h-12 w-12 text-icon-brand-light" />
-            <h3 className="text-graphite dark:text-seasalt text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               Support
             </h3>
             <p className="text-graphite dark:text-seasalt text-lg">

@@ -3,7 +3,7 @@ export default function SuiteAppFeatures() {
     <section className="bg-seasalt dark:bg-pureblack py-24 relative z-40">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <header className="mb-10 text-left">
-          <h2 className="text-techblack dark:text-seasalt mb-6 text-4xl leading-tight font-bold">
+          <h2 className="text-techblack dark:text-seasalt mb-8 text-5xl leading-tight font-bold">
             Discover Our Most Popular SuiteApps
           </h2>
           <p className="text-techblack dark:text-seasalt mt-4 mb-8 max-w-4xl text-lg font-light">
@@ -57,7 +57,7 @@ export default function SuiteAppFeatures() {
 function FeatureCard({ title, description }) {
   return (
     <div className="text-seasalt  dark:bg-graphite  dark:text-seasalt bg-seasalt flex flex-col rounded-2xl border border-zinc-300 p-6 shadow-md dark:border-zinc-800">
-      <h3 className="text-graphite dark:text-seasalt mb-2 text-xl font-semibold">
+      <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-semibold">
         {title}
       </h3>
       <p className="dark:text-seasalt/80 text-base text-zinc-700">

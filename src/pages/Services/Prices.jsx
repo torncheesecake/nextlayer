@@ -7,7 +7,7 @@ export default function Prices() {
     >
       <div className="mx-auto w-[90%] max-w-7xl px-6">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-seasalt dark:text-seasalt mb-6 text-center text-5xl font-bold">
+          <h2 className="text-seasalt dark:text-seasalt mb-8 text-center text-5xl font-bold">
             OneSupport 12 and 24 Month Contracts
           </h2>
           <p className="text-seasalt dark:text-seasalt mb-16 text-center text-lg">
@@ -23,7 +23,7 @@ export default function Prices() {
             className=" dark:bg-graphite bg-seasalt relative flex flex-col rounded-xl border p-10 text-center shadow-lg"
             id="onesupport-80"
           >
-            <h3 className="text-graphite dark:text-seasalt mb-8 text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               OneSupport 80
             </h3>
             <p className="text-graphite dark:text-seasalt mb-0 text-lg font-semibold">
@@ -64,7 +64,7 @@ export default function Prices() {
             className=" dark:bg-graphite bg-seasalt flex flex-col rounded-xl border p-10 text-center shadow-lg"
             id="onesupport-25"
           >
-            <h3 className="text-graphite dark:text-seasalt mb-8 text-2xl font-bold">
+            <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl font-bold">
               OneSupport 25
             </h3>
             <p className="text-graphite dark:text-seasalt mb-0 font-semibold">

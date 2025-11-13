@@ -3,7 +3,7 @@ export default function NetSuiteSupport() {
   return (
     <section className="bg-surface-light dark:bg-surface-dark py-24">
       <div className="container mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-primary-light dark:text-primary-dark mb-14 text-center text-5xl font-bold">
+        <h2 className="text-primary-light dark:text-primary-dark mb-8 text-center text-5xl font-bold">
           Comprehensive NetSuite Support
         </h2>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
@@ -12,7 +12,7 @@ export default function NetSuiteSupport() {
             <span className="text-icon-brand-light dark:text-icon-brand-dark mb-4">
               <ClipboardCheck className="h-10 w-10" />
             </span>
-            <h3 className="text-primary-light dark:text-primary-dark mb-2 text-2xl font-bold">
+            <h3 className="text-primary-light dark:text-primary-dark mb-6 text-3xl font-bold">
               Proactive Issue Resolution
             </h3>
             <p className="text-primary-light dark:text-primary-dark text-lg">
@@ -25,7 +25,7 @@ export default function NetSuiteSupport() {
             <span className="text-icon-brand-light dark:text-icon-brand-dark mb-4">
               <LifeBuoy className="h-10 w-10" />
             </span>
-            <h3 className="text-primary-light dark:text-primary-dark mb-2 text-2xl font-bold">
+            <h3 className="text-primary-light dark:text-primary-dark mb-6 text-3xl font-bold">
               Dedicated Support &amp; Troubleshooting
             </h3>
             <p className="text-primary-light dark:text-primary-dark text-lg">
@@ -38,7 +38,7 @@ export default function NetSuiteSupport() {
             <span className="text-icon-brand-light dark:text-icon-brand-dark mb-4">
               <Headset className="h-10 w-10" />
             </span>
-            <h3 className="text-primary-light dark:text-primary-dark mb-2 text-2xl font-bold">
+            <h3 className="text-primary-light dark:text-primary-dark mb-6 text-3xl font-bold">
               User Training &amp; Empowerment
             </h3>
             <p className="text-primary-light dark:text-primary-dark text-lg">
@@ -51,7 +51,7 @@ export default function NetSuiteSupport() {
             <span className="text-icon-brand-light dark:text-icon-brand-dark mb-4">
               <Rocket className="h-10 w-10" />
             </span>
-            <h3 className="text-primary-light dark:text-primary-dark mb-2 text-2xl font-bold">
+            <h3 className="text-primary-light dark:text-primary-dark mb-6 text-3xl font-bold">
               Scalable Support Plans
             </h3>
             <p className="text-primary-light dark:text-primary-dark text-lg">

@@ -134,7 +134,7 @@ export default function Navbar() {
                 <div className="bg-seasalt border-biscay dark:bg-techblack dark:border-sideral overflow-hidden rounded-xl border shadow-2xl">
                   <div className="flex">
                     <div className="bg-biscay text-seasalt flex min-h-[300px] w-[265px] flex-col justify-center p-8">
-                      <h3 className="mb-2 text-3xl font-semibold">
+                      <h3 className="mb-6 text-3xl font-semibold">
                         What we offer
                       </h3>
                       <p className="text-lg opacity-90">
@@ -147,7 +147,7 @@ export default function Navbar() {
                       >
                         {desktopSections.map((section) => (
                           <div key={section.heading}>
-                            <h4 className="text-techblack dark:text-seasalt mb-3 pb-1 text-lg font-semibold tracking-wide">
+                            <h4 className="text-techblack dark:text-seasalt mb-4 pb-1 text-2xl font-semibold tracking-wide">
                               {section.heading}
                             </h4>
                             <ul className="space-y-1">
@@ -186,7 +186,7 @@ export default function Navbar() {
                           >
                             {bottomSections.map((section) => (
                               <div key={section.heading}>
-                                <h4 className="text-techblack dark:text-seasalt mb-2 pb-1 text-lg font-semibold tracking-wide">
+                                <h4 className="text-techblack dark:text-seasalt mb-4 pb-1 text-2xl font-semibold tracking-wide">
                                   {section.heading}
                                 </h4>
                                 <ul className="space-y-1">

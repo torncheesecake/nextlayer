@@ -126,7 +126,7 @@ export default function SuiteAppsAutomation() {
           className="flex flex-col items-start text-left md:items-center md:text-center"
         >
           <span className="mb-5">{app.icon}</span>
-          <h3 className="text-graphite dark:text-seasalt mb-2 text-2xl leading-tight font-bold tracking-tight">
+          <h3 className="text-graphite dark:text-seasalt mb-6 text-3xl leading-tight font-bold tracking-tight">
             {app.title}
           </h3>
           <p className="dark:text-seasalt/80 mt-1 max-w-xs text-lg leading-[1.5] text-zinc-700">

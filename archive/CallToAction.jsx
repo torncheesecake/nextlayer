@@ -4,7 +4,7 @@ export default function CallToAction() {
   return (
     <section className="bg-nlc-blue dark:bg-techblack py-20 text-center">
       <div className="mx-auto w-[90%] max-w-7xl px-6">
-        <h2 className="text-icon-brand-light dark:text-icon-brand-dark mb-12 text-center text-5xl font-semibold">
+        <h2 className="text-icon-brand-light dark:text-icon-brand-dark mb-8 text-center text-5xl font-semibold">
           Ready to talk to a real expert?
         </h2>
         <p className="text-graphite dark:text-seasalt mb-10 text-2xl">
