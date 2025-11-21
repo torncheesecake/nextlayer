@@ -1,0 +1,39 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer & Designer: Matthew Hillman
+    Contact: hello [at] nextlayerconsulting.com
+    Location: United Kingdom
+
+# COMPANY
+
+    Next Layer Consulting Ltd
+    UK-based NetSuite consulting firm
+    Website: https://www.nextlayerconsulting.com
+    Email: hello [at] nextlayerconsulting.com
+    Phone: +44 (0)1784 902 047
+
+# THANKS
+
+    To our clients for trusting us with their NetSuite implementations
+    To the open-source community for amazing tools and libraries
+
+# TECHNOLOGY COLOPHON
+
+    Frontend: React, Vite
+    Styling: Tailwind CSS
+    Icons: Lucide React
+    Routing: React Router
+    Fonts: Figtree (Google Fonts)
+    Analytics: Google Analytics 4
+    Deployment: [Your hosting platform]
+
+# SITE
+
+    Last update: 2025-01-14
+    Language: English (British)
+    Doctype: HTML5
+    Standards: W3C HTML5, CSS3
+    Components: Accessible, Responsive, SEO-optimised

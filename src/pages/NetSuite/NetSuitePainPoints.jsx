@@ -17,7 +17,7 @@ export default function ErpPainPoints() {
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
               Still stitching reports together in Excel? NetSuite automates
-              operations across finance, sales, and fulfilment — so your team
+              operations across finance, sales, and fulfilment - so your team
               stops wasting time.
             </p>
           </div>
@@ -44,8 +44,8 @@ export default function ErpPainPoints() {
               No Real-Time Insights
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
-              If yo're waiting for someone to "pull the numbers", it's too late.
-              NetSuite gives you live dashboards and reporting across the
+              If you're waiting for someone to "pull the numbers", it's too
+              late. NetSuite gives you live dashboards and reporting across the
               business.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function ErpPainPoints() {
             </h3>
             <p className="text-graphite dark:text-seasalt mt-1 max-w-xs text-lg leading-[1.5]">
               Growing fast but stuck with systems that can't keep up? NetSuite
-              scales with you — and we make sure it's done right from the start.
+              scales with you - and we make sure it's done right from the start.
             </p>
           </div>
         </div>

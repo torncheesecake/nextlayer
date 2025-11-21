@@ -6,9 +6,9 @@ export default function ImplementationRescue() {
   return (
     <>
       <SEO
-        title="NetSuite"
-        description="Unlock NetSuite success with UK-based NetSuite consultants offering expert ERP implementation, customisation, optimisation, and support. Solve integration, automation, and adoption challenges with tailored solutions for mid-market and enterprise businesses. Maximise ROI with trusted NetSuite partners delivering proven results."
-        path="/"
+        title="Implementation Rescue"
+        description="Rescue your failing NetSuite implementation with expert UK consultants. Fix stalled projects, resolve integration issues, correct misconfiguration, and get your ERP back on track. Proven rescue methodology to deliver working NetSuite systems from failed implementations. Get your project unstuck."
+        path="/netsuite/implementation-rescue"
       />
       <RescuePain /> <RescueChecklist />
     </>

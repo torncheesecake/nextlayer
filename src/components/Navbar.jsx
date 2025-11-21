@@ -2,7 +2,7 @@ import LogoDark from "@/assets/logodark.png";
 import LogoLight from "@/assets/logolight.png";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const MENU_SECTIONS = [
@@ -21,8 +21,8 @@ const MENU_SECTIONS = [
       {
         label: "Web Development",
         to: "/web-services/web-development",
-        disabled: true,
-        comingSoon: true,
+        disabled: false,
+        comingSoon: false,
       },
     ],
   },
@@ -60,6 +60,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const megaMenuRef = useRef(null);
+  const location = useLocation();
+  const isWebDevPage = location.pathname === "/web-services/web-development";
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -98,68 +100,100 @@ export default function Navbar() {
   const bottomSections = MENU_SECTIONS.slice(MAX_MEGA_COLUMNS);
 
   return (
-    <header className="bg-seasalt dark:bg-graphite sticky top-0 z-50 w-full">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-        <NavLink to="/" className="flex items-center gap-2">
-          <img
-            src={LogoLight}
-            alt="Next Layer Consulting"
-            className="h-14 dark:hidden"
-          />
-          <img
-            src={LogoDark}
-            alt="Next Layer Consulting"
-            className="hidden h-14 dark:block"
-          />
-        </NavLink>
-        <nav className="hidden items-center gap-8 md:flex">
-          <div ref={megaMenuRef}>
-            <button
-              onClick={() => setMegaOpen((v) => !v)}
-              className="text-techblack dark:text-seasalt hover:text-biscay-light2 dark:hover:text-biscay-light1 flex items-center gap-1 font-medium transition"
-              aria-expanded={megaOpen}
-              aria-controls="mega-offer"
-            >
-              What we offer
-              <ChevronDown
-                size={16}
-                className={`transition-transform ${megaOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {megaOpen && (
-              <div
-                id="mega-offer"
-                className={`absolute ${MEGA_MENU_WIDTH_CLASS} top-full left-0 mt-2 w-7xl`}
+    <header
+      className={`${isWebDevPage ? "bg-black dark:bg-black" : "bg-seasalt dark:bg-graphite"} sticky top-0 z-50 w-full relative`}
+    >
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-8 md:px-16 py-3">
+        <div className="flex items-center gap-8">
+          <NavLink
+            to="/"
+            className="flex items-center gap-2 select-none"
+            draggable="false"
+          >
+            <img
+              src={LogoLight}
+              alt="Next Layer Consulting"
+              className={`h-14 pointer-events-none ${isWebDevPage ? "hidden" : "dark:hidden"}`}
+              width="248"
+              height="56"
+              draggable="false"
+            />
+            <img
+              src={LogoDark}
+              alt="Next Layer Consulting"
+              className={`h-14 pointer-events-none ${isWebDevPage ? "block" : "hidden dark:block"}`}
+              width="248"
+              height="56"
+              draggable="false"
+            />
+          </NavLink>
+          <nav className="hidden items-center gap-8 md:flex">
+            <div ref={megaMenuRef}>
+              <button
+                onClick={() => setMegaOpen((v) => !v)}
+                className={`${isWebDevPage ? "text-seasalt hover:text-purple-400" : "text-techblack dark:text-seasalt hover:text-bittersweet dark:hover:text-bittersweet-dark2"} flex items-center gap-1 font-medium transition`}
+                aria-expanded={megaOpen}
+                aria-controls="mega-offer"
               >
-                <div className="bg-seasalt border-biscay dark:bg-techblack dark:border-sideral overflow-hidden rounded-xl border shadow-2xl">
-                  <div className="flex">
-                    <div className="bg-biscay text-seasalt flex min-h-[300px] w-[265px] flex-col justify-center p-8">
-                      <h3 className="mb-6 text-3xl font-semibold">
-                        What we offer
-                      </h3>
-                      <p className="text-lg opacity-90">
-                        Explore our solutions and services.
-                      </p>
-                    </div>
-                    <div className="flex-1 p-6 md:p-8">
+                What we offer
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    megaOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {megaOpen && (
+                <div id="mega-offer" className="absolute top-full left-0 mt-2">
+                  <div
+                    className={`${isWebDevPage ? "bg-black border-gray-800" : "bg-white dark:bg-techblack border-gray-200 dark:border-gray-700"} overflow-hidden rounded-xl border shadow-2xl w-[650px] relative`}
+                  >
+                    {/* Gradient glow accents for web dev page */}
+                    {isWebDevPage && (
+                      <>
+                        <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[150px] pointer-events-none z-1"></div>
+                        <div className="absolute -bottom-20 -left-20 w-[350px] h-[350px] bg-bittersweet/18 rounded-full blur-[150px] pointer-events-none z-1"></div>
+                      </>
+                    )}
+                    <div className="p-8 relative z-10">
                       <div
-                        className={`grid grid-cols-1 gap-12 ${GRID_COLS_MAP[desktopSections.length] || "md:grid-cols-3"}`}
+                        className={`mb-8 pb-6 border-b ${isWebDevPage ? "border-gray-800" : "border-gray-200 dark:border-gray-700"}`}
                       >
+                        <h3
+                          className={`${isWebDevPage ? "text-seasalt" : "text-techblack dark:text-seasalt"} text-2xl font-bold mb-2`}
+                        >
+                          What we offer
+                        </h3>
+                        <p
+                          className={`${isWebDevPage ? "text-seasalt/70" : "text-graphite dark:text-seasalt/70"} text-base`}
+                        >
+                          Explore our solutions and services
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-8">
                         {desktopSections.map((section) => (
                           <div key={section.heading}>
-                            <h4 className="text-techblack dark:text-seasalt mb-4 pb-1 text-2xl font-semibold tracking-wide">
-                              {section.heading}
-                            </h4>
-                            <ul className="space-y-1">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div
+                                className={`w-1 h-5 rounded-full ${isWebDevPage ? "bg-purple-500" : "bg-bittersweet dark:bg-bittersweet"}`}
+                              ></div>
+                              <h4
+                                className={`${isWebDevPage ? "text-seasalt" : "text-techblack dark:text-seasalt"} text-sm font-bold uppercase tracking-wide`}
+                              >
+                                {section.heading}
+                              </h4>
+                            </div>
+                            <ul className="space-y-0.5 pl-3">
                               {section.links.map((link) =>
                                 link.hidden ? null : (
                                   <li key={link.label}>
                                     {link.disabled ? (
-                                      <span className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-1 text-lg whitespace-nowrap text-neutral-400">
+                                      <span className="flex cursor-not-allowed items-center gap-2 py-2 text-sm text-neutral-400">
                                         {link.label}
                                         {link.comingSoon && (
-                                          <span className="bg-bittersweet text-seasalt ml-2 rounded px-2 py-1 text-xs font-semibold">
-                                            Coming Soon
+                                          <span className="bg-bittersweet text-seasalt ml-2 rounded px-2 py-0.5 text-xs font-semibold">
+                                            Soon
                                           </span>
                                         )}
                                       </span>
@@ -167,9 +201,11 @@ export default function Navbar() {
                                       <NavLink
                                         to={link.to}
                                         onClick={closeAll}
-                                        className="hover:bg-biscay hover:text-seasalt dark:text-seasalt flex items-center gap-2 rounded-md px-2 py-1 text-lg text-neutral-700 transition dark:hover:bg-neutral-700"
+                                        className={`${isWebDevPage ? "text-seasalt/80 hover:text-purple-400" : "text-graphite dark:text-seasalt/80 hover:text-bittersweet dark:hover:text-bittersweet-dark2"} flex items-center py-2 text-base font-medium transition-colors group`}
                                       >
-                                        {link.label}
+                                        <span className="group-hover:translate-x-1 transition-transform">
+                                          {link.label}
+                                        </span>
                                       </NavLink>
                                     )}
                                   </li>
@@ -178,27 +214,32 @@ export default function Navbar() {
                             </ul>
                           </div>
                         ))}
-                      </div>
-                      {bottomSections.length > 0 && (
-                        <div className="border-bittersweet dark:border-sideral mt-8 border-t pt-4">
-                          <div
-                            className={`grid grid-cols-1 gap-12 ${GRID_COLS_MAP[desktopSections.length] || "md:grid-cols-3"}`}
-                          >
+                        {bottomSections.length > 0 && (
+                          <>
                             {bottomSections.map((section) => (
                               <div key={section.heading}>
-                                <h4 className="text-techblack dark:text-seasalt mb-4 pb-1 text-2xl font-semibold tracking-wide">
-                                  {section.heading}
-                                </h4>
-                                <ul className="space-y-1">
+                                <div className="flex items-center gap-2 mb-3">
+                                  <div
+                                    className={`w-1 h-5 rounded-full ${isWebDevPage ? "bg-purple-500" : "bg-bittersweet dark:bg-bittersweet"}`}
+                                  ></div>
+                                  <h4
+                                    className={`${isWebDevPage ? "text-seasalt" : "text-techblack dark:text-seasalt"} text-sm font-bold uppercase tracking-wide`}
+                                  >
+                                    {section.heading}
+                                  </h4>
+                                </div>
+                                <ul className="space-y-0.5 pl-3">
                                   {section.links.map((link) =>
                                     link.hidden ? null : (
                                       <li key={link.label}>
                                         <NavLink
                                           to={link.to}
                                           onClick={closeAll}
-                                          className="hover:bg-biscay dark:text-seasalt text-techblack hover:text-seasalt flex items-center gap-2 rounded-md px-2 py-1 text-lg transition"
+                                          className={`${isWebDevPage ? "text-seasalt/80 hover:text-purple-400" : "text-graphite dark:text-seasalt/80 hover:text-bittersweet dark:hover:text-bittersweet-dark2"} flex items-center py-2 text-base font-medium transition-colors group`}
                                         >
-                                          {link.label}
+                                          <span className="group-hover:translate-x-1 transition-transform">
+                                            {link.label}
+                                          </span>
                                         </NavLink>
                                       </li>
                                     ),
@@ -206,42 +247,50 @@ export default function Navbar() {
                                 </ul>
                               </div>
                             ))}
-                          </div>
-                        </div>
-                      )}
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-          <NavLink
-            to="/about"
-            className="text-graphite dark:text-seasalt hover:text-biscay-light2 dark:hover:text-biscay-light2 font-medium transition"
-          >
-            About Us
-          </NavLink>
+              )}
+            </div>
+            <NavLink
+              to="/about"
+              className={`${isWebDevPage ? "text-seasalt hover:text-purple-400" : "text-graphite dark:text-seasalt hover:text-bittersweet dark:hover:text-bittersweet-dark2"} font-medium transition`}
+            >
+              About Us
+            </NavLink>
+          </nav>
+        </div>
+        <div className="hidden items-center gap-8 md:flex">
           <NavLink
             to="/contact"
             className="text-seasalt dark:bg-bittersweet-dark2 dark:hover:bg-bittersweet-dark1 bg-bittersweet hover:bg-bittersweet-dark1 rounded-full px-4 py-2 font-semibold transition"
           >
             Contact Us
           </NavLink>
-          <div className="flex items-center gap-2">
-            <ThemeSwitcher />
-          </div>
-        </nav>
+          {!isWebDevPage && (
+            <div className="flex items-center gap-2">
+              <ThemeSwitcher />
+            </div>
+          )}
+        </div>
         <button
           onClick={toggleMobile}
-          className="text-techblack dark:text-seasalt focus:outline-none md:hidden"
+          className={`${isWebDevPage ? "text-seasalt" : "text-techblack dark:text-seasalt"} focus:outline-none md:hidden`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
       {mobileOpen && (
-        <div className="border-silver bg-seasalt dark:border-sideral dark:bg-techblack border-t md:hidden">
-          <div className="bg-nlc-blue text-seasalt px-5 py-6">
+        <div
+          className={`${isWebDevPage ? "bg-black border-gray-800" : "border-silver bg-seasalt dark:border-sideral dark:bg-techblack"} border-t md:hidden`}
+        >
+          <div
+            className={`${isWebDevPage ? "bg-purple-500" : "bg-nlc-blue"} text-seasalt px-5 py-6`}
+          >
             <div className="text-xl font-semibold">What we offer</div>
             <div className="mt-1 text-lg opacity-90">
               Explore our solutions and services.
@@ -250,7 +299,9 @@ export default function Navbar() {
           <nav className="space-y-6 px-5 py-5">
             {MENU_SECTIONS.map((section) => (
               <div key={section.heading}>
-                <p className="dark:text-seasalt mb-3 text-lg font-semibold tracking-wide text-neutral-600 uppercase underline underline-offset-4">
+                <p
+                  className={`${isWebDevPage ? "text-seasalt" : "dark:text-seasalt text-neutral-600"} mb-3 text-lg font-semibold tracking-wide uppercase underline underline-offset-4`}
+                >
                   {section.heading}
                 </p>
                 <ul className="space-y-3">
@@ -261,8 +312,8 @@ export default function Navbar() {
                           {link.label}
                           {link.comingSoon && (
                             <span className="bg-bittersweet text-seasalt ml-2 rounded px-2 py-1 text-xs font-semibold">
-                                            Coming Soon
-                                          </span>
+                              Coming Soon
+                            </span>
                           )}
                         </span>
                       </li>
@@ -271,7 +322,7 @@ export default function Navbar() {
                         <NavLink
                           to={link.to}
                           onClick={closeAll}
-                          className="hover:bg-biscay hover:text-seasalt dark:text-seasalt flex items-center gap-2 rounded-md px-2 py-1 text-lg text-neutral-700 transition dark:hover:bg-neutral-700"
+                          className={`${isWebDevPage ? "text-seasalt hover:bg-purple-500/20 hover:text-purple-400" : "hover:bg-biscay hover:text-seasalt dark:text-seasalt text-neutral-700 dark:hover:bg-neutral-700"} flex items-center gap-2 rounded-md px-2 py-1 text-lg transition`}
                         >
                           {link.label}
                         </NavLink>
@@ -281,11 +332,13 @@ export default function Navbar() {
                 </ul>
               </div>
             ))}
-            <div className="border-silver dark:border-sideral space-y-6 border-t pt-6">
+            <div
+              className={`${isWebDevPage ? "border-gray-800" : "border-silver dark:border-sideral"} space-y-6 border-t pt-6`}
+            >
               <NavLink
                 to="/about"
                 onClick={closeAll}
-                className="text-graphite dark:text-seasalt hover:text-biscay-light2 dark:hover:text-biscay-light2 -mx-3 block rounded-lg px-3 py-2 text-lg font-medium transition"
+                className={`${isWebDevPage ? "text-seasalt hover:text-purple-400" : "text-graphite dark:text-seasalt hover:text-biscay-light2 dark:hover:text-biscay-light2"} -mx-3 block rounded-lg px-3 py-2 text-lg font-medium transition`}
               >
                 About Us
               </NavLink>

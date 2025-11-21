@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MC53FCM3JC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-MC53FCM3JC");
+    </script>
+
     <script>
       (function () {
         try {
@@ -22,8 +37,14 @@
         } catch (e) {}
       })();
     </script>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Matthew Hillman" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#0A2E4D" />
+    <title>Next Layer Consulting | NetSuite & Cyber Security Experts</title>
+    <link rel="canonical" href="https://www.nextlayerconsulting.com/" />
+    <link rel="manifest" href="/manifest.json" />
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./src/assets/favicon.ico" />
     <link
@@ -55,12 +76,56 @@
       sizes="512x512"
       href="./src/assets/android-chrome-512x512.png"
     />
+    <!-- Preconnect to external domains for faster resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Preload ONLY critical fonts to reduce critical path (removed Light/Black weights) -->
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Satoshi-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Satoshi-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <!-- Preload Playfair Display for Web page headings (critical for Web page) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Load Google Fonts asynchronously to prevent render blocking on mobile -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

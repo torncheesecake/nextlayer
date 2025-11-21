@@ -76,3 +76,26 @@ package-lock.json
 
 # Service credentials
 service-account-key.json
+
+# Security - Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+*.der
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Security - SSH and GPG
+.ssh/
+*.gpg
+*.asc
+
+# Security - API keys and tokens
+.secrets
+secrets.json
+credentials.json

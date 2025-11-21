@@ -1,6 +1,8 @@
 "use client";
-import { useMemo, useState } from "react";
-import PricingPDFDownload from "./PricingPDF";
+import { lazy, Suspense, useMemo, useState } from "react";
+
+// Lazy load PDF component to save 200+ KiB on initial bundle
+const PricingPDFDownload = lazy(() => import("./PricingPDF"));
 
 // 1) Define data at module scope so it is always in scope
 const PRICING_DATA = [
@@ -281,7 +283,11 @@ function PricingMatrix() {
           Need a PDF version for your procurement team?
         </p>
         {/* 4) Pass filtered data and add key so link regenerates when filter changes */}
-        <PricingPDFDownload key={activeFilter} pricingData={pdfData} />
+        <Suspense
+          fallback={<div className="text-sm text-zinc-400">Loading PDF...</div>}
+        >
+          <PricingPDFDownload key={activeFilter} pricingData={pdfData} />
+        </Suspense>
       </div>
     </div>
   );

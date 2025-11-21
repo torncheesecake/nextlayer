@@ -1,0 +1,15 @@
+# robots.txt for Next Layer Consulting
+# https://www.nextlayerconsulting.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive areas (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.nextlayerconsulting.com/sitemap.xml
+
+# Crawl-delay (optional, uncomment if needed)
+# Crawl-delay: 10

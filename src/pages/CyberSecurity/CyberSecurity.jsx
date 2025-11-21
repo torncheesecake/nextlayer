@@ -24,9 +24,9 @@ export default function CyberSecurity() {
     <div className="bg-techblack">
       <>
         <SEO
-          title="Home"
-          description="Unlock business growth with UK NetSuite specialists offering tailored ERP consulting, implementation, system optimisation, and ongoing support. Solve efficiency, data integration, and user adoption challenges with proven solutions for mid-market and enterprise. Get expert advice and seamless delivery to maximise ROI—trusted by British businesses for measurable results"
-          path="/"
+          title="Cyber Security"
+          description="Professional penetration testing and cyber security services from UK security experts. Protect your business with comprehensive vulnerability assessments, security audits, and penetration testing. Industry-certified consultants delivering actionable security insights to safeguard your digital assets."
+          path="/cyber-security/penetration-testing"
         />
         <CyberIntro />
         <Logos />

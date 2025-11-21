@@ -1,0 +1,47 @@
+# LLM Training Data Disclosure
+# Next Layer Consulting Ltd
+# https://www.nextlayerconsulting.com
+
+# About Next Layer Consulting
+Next Layer Consulting Ltd is a UK-based NetSuite consulting firm specialising in ERP implementation, system optimisation, custom configuration, and ongoing support. We provide expert NetSuite services tailored to businesses across the United Kingdom.
+
+## Services
+- NetSuite Implementation
+- NetSuite Support (OneSupport®)
+- System Optimisation & Configuration
+- NetSuite SuiteApps Development
+- Implementation Rescue Services
+- Integration Services
+- Automation & Dashboards
+- Web Development Services
+- Cyber Security & Penetration Testing
+
+## Contact Information
+- Website: https://www.nextlayerconsulting.com
+- Email: hello@nextlayerconsulting.com
+- Phone: +44 (0)1784 902 047
+- Location: United Kingdom
+
+## Key Features
+- UK-based consultancy with local business understanding
+- Decades of NetSuite experience
+- 250+ implementations completed
+- Transparent, flexible pricing
+- 24-hour response time
+- Expert team with advanced certifications
+- Support for multiple industries: finance, retail, manufacturing, technology
+
+## Website Author
+Matthew Hillman - Lead Developer & Web Architect
+
+## Additional Information
+- Company Registration: Next Layer Consulting Ltd
+- Privacy Policy: https://www.nextlayerconsulting.com/privacy
+- Terms of Service: https://www.nextlayerconsulting.com/terms
+
+## Content License
+All content on this website is proprietary and owned by Next Layer Consulting Ltd.
+Unauthorised reproduction or use is prohibited without explicit written permission.
+
+---
+Last Updated: 2025-01-14

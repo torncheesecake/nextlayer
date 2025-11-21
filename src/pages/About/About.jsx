@@ -1,5 +1,6 @@
 import SEO from "../../components/SEO";
 import Values from "./Values";
+import Team from "./Team";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
         path="/about"
       />
       <Values />
+      <Team />
     </>
   );
 }

@@ -12,10 +12,13 @@ const NetSuite = lazy(() => import("./pages/NetSuite/NetSuite"));
 const NetSuiteCostCalc = lazy(
   () => import("./pages/NetSuiteCostCalc/NetSuiteCostCalc"),
 );
+const NotFound = lazy(() => import("./pages/NotFound"));
 const OneSupport = lazy(() => import("./pages/Support/OneSupport"));
 const ImplementationRescue = lazy(() => import("./pages/Rescue/Rescue"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const SuiteApps = lazy(() => import("./pages/SuiteApps/SuiteApps"));
+const Terms = lazy(() => import("./pages/Terms"));
 const Web = lazy(() => import("./pages/Web/Web"));
 
 export const router = createBrowserRouter(
@@ -43,6 +46,9 @@ export const router = createBrowserRouter(
           path: "/tools/netsuite-cost-calculator",
           element: <NetSuiteCostCalc />,
         },
+        { path: "/privacy", element: <Privacy /> },
+        { path: "/terms", element: <Terms /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ],

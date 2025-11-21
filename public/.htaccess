@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Security Headers
+Header always set X-Debug-Header "htaccess-seen"
+
+# Allow iframe embedding - remove X-Frame-Options to allow all origins
+# For production, consider using CSP frame-ancestors instead
+Header unset X-Frame-Options
+
+# Content Security Policy - allow iframe embedding from any origin
+# Adjust frame-ancestors as needed for security
+Header always set Content-Security-Policy "frame-ancestors *"

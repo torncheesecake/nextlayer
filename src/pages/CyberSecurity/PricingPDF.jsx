@@ -136,7 +136,7 @@ export default function PricingPDFDownload({ pricingData }) {
     <PDFDownloadLink
       document={<PricingDocument pricingData={pricingData} />}
       fileName={`NextLayerConsulting-Pricing-Guide-${new Date().getFullYear()}.pdf`}
-      className="-zinc-800 hover:-[#FF6B6B] inline-block rounded-lg bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition"
+      className="border-zinc-800 hover:border-bittersweet inline-block rounded-lg bg-zinc-900 border-2 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
     >
       {({ loading }) => (
         <>

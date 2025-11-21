@@ -8,9 +8,9 @@ export default function OneSupport() {
   return (
     <>
       <SEO
-        title="Services"
-        description="Explore a full range of NetSuite services from certified UK consultants—implementation, data migration, custom integration, process optimisation, and tailored support. Resolve ERP challenges including inefficient processes, disconnected systems, and limited visibility. Achieve faster deployment, better adoption, and sustained success with bespoke solutions trusted by leading UK organisations."
-        path="/services"
+        title="OneSupport"
+        description="Comprehensive NetSuite support and managed services from UK experts. OneSupport packages starting at £4,250/month include system administration, customisation, troubleshooting, updates, and optimisation. Choose from Essential, Professional, or Enterprise tiers with transparent pricing and no long-term contracts."
+        path="/netsuite/support"
       />
       <ManagedServices /> <Prices /> <PriceBanner /> <PricesPAYG />
     </>

@@ -5,26 +5,45 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist", // Or any folder you want
-    sourcemap: false, // Disable source maps in production to protect source code
+    outDir: "dist",
+    sourcemap: true, // Enable source maps for better debugging (PageSpeed recommendation)
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
+          // Split node_modules into separate chunks
+          if (id.includes("node_modules")) {
+            // React core
+            if (
+              id.includes("react") ||
+              id.includes("react-dom") ||
+              id.includes("scheduler")
+            ) {
+              return "react-vendor";
             }
-            if (id.includes('lucide-react')) {
-              return 'lucide-vendor';
+            // Icons
+            if (id.includes("lucide-react")) {
+              return "lucide-vendor";
             }
-            if (id.includes('react-router-dom')) {
-              return 'react-router-vendor';
+            // Router
+            if (
+              id.includes("react-router-dom") ||
+              id.includes("react-router") ||
+              id.includes("@remix-run")
+            ) {
+              return "router-vendor";
             }
-            return 'vendor';
+            // Swiper carousel
+            if (id.includes("swiper")) {
+              return "swiper-vendor";
+            }
+            // Everything else
+            return "vendor";
           }
         },
       },
     },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
   },
   base: "/dev/",
   resolve: {
