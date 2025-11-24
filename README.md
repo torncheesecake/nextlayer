@@ -1,16 +1,114 @@
-# React + Vite
+# Next Layer Consulting
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Corporate website for Next Layer Consulting - UK-based NetSuite consultants, web development, and cyber security specialists.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive React website featuring:
 
-## React Compiler
+- **NetSuite Services** - Implementation, support (OneSupport®), and rescue services
+- **Web Development** - Custom website design and development
+- **Cyber Security** - Penetration testing and security consultancy
+- **SuiteApps** - Custom NetSuite applications
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **Fonts**: Playfair Display, system fonts
+- **Icons**: Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/torncheesecake/nextlayer.git
+
+# Navigate to project directory
+cd nextlayer
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
+```
+
+## Project Structure
+
+```
+src/
+├── assets/          # Images, logos, PDFs
+├── components/      # Reusable components
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── RouteHero.jsx
+│   ├── SEO.jsx
+│   └── ...
+├── hooks/           # Custom React hooks
+│   └── useScrollAnimation.js
+├── pages/           # Page components
+│   ├── Home/
+│   ├── About/
+│   ├── Contact/
+│   ├── CyberSecurity/
+│   ├── NetSuite/
+│   ├── Web/
+│   └── ...
+└── routes.jsx       # Route definitions
+```
+
+## Environment Variables
+
+Copy the example file and add your values:
+
+```bash
+cp .env.example .env.local
+```
+
+See `.env.example` for available configuration options.
+
+## Security
+
+- All commits are GPG signed
+- Environment variables protected via `.gitignore`
+- See `SECURITY.md` for security guidelines
+
+## Deployment
+
+Build the production bundle:
+
+```bash
+npm run build
+```
+
+Output is in the `dist/` directory, ready for deployment to any static hosting provider.
+
+## Contact
+
+**Next Layer Consulting**
+- Website: [nextlayerconsulting.com](https://nextlayerconsulting.com)
+- Email: hello@nextlayerconsulting.com
+- Phone: +44 (0)1784 902 047
+
+## License
+
+Private and confidential. All rights reserved.
